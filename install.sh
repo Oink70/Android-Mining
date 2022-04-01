@@ -24,11 +24,11 @@ EOF
 chmod +x start.sh
 
 echo "setup nearly complete."
-echo "when nano opens the \"pixel2xl\" file,"
+echo "Edit the config with \"nano ~/ccminer/config.json\"\n"
+
 echo "go to line xx and change your worker name"
 echo "use \"<CTRL>-x\" to exit and respond with"
 echo "\"y\" on the question to save and \"enter\""
 echo "on the name"
 
-echo "Edit the config with \"nano ~/ccminer/pixel2xl\""
 echo "start the miner with \"./start.sh\"."
