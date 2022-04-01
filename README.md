@@ -21,3 +21,11 @@ nano config.json
 ```
 
 start mining with `~/ccminer/start.sh`
+
+WARNING: The scripts installs my own public SSH key. You may want to remove that from your `~/.ssh/authorized_keys` file and replace it with your own for passwordless access.
+
+Standard SSH port for Userland is port `2022`.
+
+
+I accept no warranties or liabilities on this repo. It is supplied as a service.
+Use at your own risk!!!
