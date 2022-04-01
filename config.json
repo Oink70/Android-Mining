@@ -1,0 +1,32 @@
+{
+	"pools":[{
+        "name": "Oinkpool.local",
+		"url": "stratum+tcp://10.0.0.201:9998",
+		"timeout": 15
+	},
+	{
+		"name": "pool.verus.io, TLS",
+        "url": "stratum+tcp://10.0.0.14:9999",
+		"timeout": 150
+	},
+	{
+		"name": "pool.verus.io",
+        "url": "stratum+tcp://pool.verus.io:9998",
+		"timeout": 150,
+		"time-limit": 3600
+	},
+	{
+		"name": "verus.farm (Quipacorn)",
+        "url": "stratum+tcp://verus.farm:9999",
+		"timeout": 60,
+		"time-limit": 600
+	}],
+	
+	"user": "iBSUZSgXHEGGz65GTT6BGgchtkTHoFBs57.Pixel2XL##",
+	"algo": "verus",
+	"threads": 8,
+	"cpu-priority": 1,
+	"retry-pause": 5,
+	"api-allow": "10.0.0.0/24",
+	"api-bind": "0.0.0.0:4068"
+}
