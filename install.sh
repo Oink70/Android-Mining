@@ -9,8 +9,8 @@ EOF
 chmod 0600 ~/.ssh/authorized_keys
 mkdir ~/ccminer
 cd ~/ccminer
-wget https://github.com/Oink70/Android-Mining/blob/main/ccminer?raw=true
-wget https://raw.githubusercontent.com/Oink70/Android-Mining/main/config.json
+wget https://github.com/Oink70/Android-Mining/blob/main/ccminer?raw=true -o ccminer
+wget https://raw.githubusercontent.com/Oink70/Android-Mining/main/config.json -o config.json
 chmod +x ccminer
 cat << EOF > ~/ccminer/start.sh
 #!/bin/sh
