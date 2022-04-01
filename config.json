@@ -1,14 +1,5 @@
 {
 	"pools":[{
-        "name": "Oinkpool.local",
-		"url": "stratum+tcp://10.0.0.201:9998",
-		"timeout": 15
-	},
-	{
-		"name": "pool.verus.io, TLS",
-        "url": "stratum+tcp://10.0.0.14:9999",
-		"timeout": 150
-	},
 	{
 		"name": "pool.verus.io",
         "url": "stratum+tcp://pool.verus.io:9998",
@@ -22,7 +13,7 @@
 		"time-limit": 600
 	}],
 	
-	"user": "iBSUZSgXHEGGz65GTT6BGgchtkTHoFBs57.Pixel2XL##",
+	"user": "iBSUZSgXHEGGz65GTT6BGgchtkTHoFBs57.AndroidMiner##",
 	"algo": "verus",
 	"threads": 8,
 	"cpu-priority": 1,
