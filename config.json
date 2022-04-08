@@ -1,5 +1,5 @@
 {
-	"pools":[{
+	"pools":[
 	{
 		"name": "pool.verus.io",
         "url": "stratum+tcp://pool.verus.io:9998",
