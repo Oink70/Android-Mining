@@ -29,3 +29,13 @@ Standard SSH port for Userland is port `2022`.
 
 I accept no warranties or liabilities on this repo. It is supplied as a service.
 Use at your own risk!!!
+
+Starting the miner:
+`~/ccminer/start.sh`
+
+Monitoring the miner:
+`screen -x CCminer`
+exit with `CTRL-D` key combination followed by `A`.
+
+Terminating the miner:
+`screen -X -S CCminer quit`
