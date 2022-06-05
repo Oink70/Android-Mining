@@ -1,7 +1,7 @@
 # Android-Mining
 Quick installation of mining on Android Phones
 
-- install userland on your Android
+- install Userland app (from appstore or a downloaded apk) on your Android
 - select Ubuntu in Userland and supply your login details.
 - choose SSH
 - wait for it to install, enter Ubuntu and log into your account
