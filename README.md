@@ -39,3 +39,12 @@ exit with `CTRL-D` key combination followed by `A`.
 
 Terminating the miner:
 `screen -X -S CCminer quit`
+
+## Github cloning and customizing
+1. clone this repo to your own github account
+2. change the URL on line 14 of the README.md to reflect your own account
+3. change the SSH key on line 7 of `install.sh` to reflect your own SSH key
+4. change lines 12+13 to reflect your own github link (especially line 13!!!)
+5. adjust the `config.json` to your address and mining details.
+6. optional: change the lines 20-21 of your `config.json` to your own LAN IP range.
+
