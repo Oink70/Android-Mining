@@ -3,8 +3,7 @@
 	{
 		"name": "pool.verus.io",
         "url": "stratum+tcp://pool.verus.io:9998",
-		"timeout": 150,
-		"time-limit": 3600
+		"timeout": 150
 	},
 	{
 		"name": "verus.farm (Quipacorn)",
