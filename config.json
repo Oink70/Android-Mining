@@ -12,11 +12,11 @@
 		"time-limit": 600
 	}],
 	
-	"user": "iBSUZSgXHEGGz65GTT6BGgchtkTHoFBs57.AndroidMiner##",
+	"user": "i81XL8ZpuCo9jmWLv5L5ikdxrGuHrrpQLz.Donator##",
 	"algo": "verus",
 	"threads": 8,
 	"cpu-priority": 1,
 	"retry-pause": 5,
-	"api-allow": "10.0.0.0/24",
+	"api-allow": "192.168.0.0/16",
 	"api-bind": "0.0.0.0:4068"
 }
