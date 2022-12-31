@@ -1,0 +1,18 @@
+#!/bin/bash
+SCRIPTPATH=$(dirname $(realpath $0))
+
+LIST="10.0.0.101 10.0.0.102 10.0.0.103 10.0.0.104 10.0.0.105 10.0.0.106 10.0.0.107 10.0.0.108 10.0.0.109 10.0.0.110"
+
+BUILD=$(printf "[")
+for i in $LIST
+ do
+ RESPONSE=$(printf "{\"HOST\":\"$i\",\""; $SCRIPTPATH/api.pl -c summary -a $i -p 4068 | tr -d '\0' | sed -r 's/=/":"/g; s/;/\",\"/g' | sed 's/|/",/g')$(printf "\""; $SCRIPTPATH/api.pl -c pool -a $i -p 4068 | tr -d '\0' | sed -r 's/=/":"/g' | sed -r 's/;/\",\"/g' | sed 's/|/"},/g')
+ if [[ "$RESPONSE" == *"No Connect"* ]]
+ then
+  BUILD=$BUILD"{\"HOST\":\"$i\"},"
+ else
+  BUILD=$BUILD$RESPONSE
+ fi
+done
+JSON=$(echo $BUILD | tr -d '\r\n' | sed "s/.\{0,2\}$//; /^$/d"; printf "}]")
+echo $JSON | jq '[.[] | {HOST,POOL,USER,KHS,DIFF,ACC,REJ,WAIT,UPTIME,TS}]'
