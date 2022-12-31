@@ -54,7 +54,7 @@ Terminating the miner:
 6. optional: change the lines 20-21 of your `config.json` to your own LAN IP range.
 
 ## Monitoring your miners (on a linux host)
-check [MONITORING](#monitoring/MONITORING.md).
+check [MONITORING](/monitoring/MONITORING.md).
 
 WARNING: The scripts installs my own public SSH key. You may want to remove that from your `~/.ssh/authorized_keys` file and replace it with your own for passwordless access.
 
