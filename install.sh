@@ -16,6 +16,8 @@ cat << EOF > ~/ccminer/start.sh
 #!/bin/sh
 #exit existing screens with the name CCminer
 screen -S CCminer -X quit
+#wipe any existing (dead) screens)
+screen -wipe
 #create new disconnected session CCminer
 screen -dmS CCminer
 #run the miner
