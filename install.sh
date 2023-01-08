@@ -21,7 +21,7 @@ screen -wipe
 #create new disconnected session CCminer
 screen -dmS CCminer
 #run the miner
-screen -S CCminer -X stuff "./ccminer -c config.json\n"
+screen -S CCminer -X stuff "~/ccminer/ccminer -c config.json\n"
 EOF
 chmod +x start.sh
 
@@ -33,4 +33,4 @@ echo "use \"<CTRL>-x\" to exit and respond with"
 echo "\"y\" on the question to save and \"enter\""
 echo "on the name"
 
-echo "start the miner with \"./start.sh\"."
+echo "start the miner with \"~/ccminer/start.sh\"."
