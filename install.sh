@@ -26,7 +26,7 @@ EOF
 chmod +x start.sh
 
 echo "setup nearly complete."
-echo "Edit the config with \"nano ~/ccminer/config.json\"\n"
+echo "Edit the config with \"nano ~/ccminer/config.json\""
 
 echo "go to line xx and change your worker name"
 echo "use \"<CTRL>-x\" to exit and respond with"
