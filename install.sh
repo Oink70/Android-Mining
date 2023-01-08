@@ -33,4 +33,4 @@ echo "use \"<CTRL>-x\" to exit and respond with"
 echo "\"y\" on the question to save and \"enter\""
 echo "on the name"
 
-echo "start the miner with \"./start.sh\"."
+echo "start the miner with \"cd ~/ccminer; ./start.sh\"."
