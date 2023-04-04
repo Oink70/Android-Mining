@@ -24,7 +24,7 @@ screen -wipe
 #create new disconnected session CCminer
 screen -dmS CCminer
 #run the miner
-screen -S CCminer -X stuff "./ccminer -c config.json\n"
+screen -S CCminer -X stuff "~/ccminer/ccminer -c ~/ccminer/config.json\n"
 EOF
 chmod +x start.sh
 
