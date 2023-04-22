@@ -38,8 +38,8 @@ Starting the miner:
 `~/ccminer/start.sh`
 
 Monitoring the miner:
-`screen -x CCminer`
-exit with `CTRL-D` key combination followed by `A`.
+- `screen -x CCminer`
+- exit with `CTRL-a` key combination followed by `d`.
 
 Terminating the miner:
 `screen -X -S CCminer quit`
