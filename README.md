@@ -2,11 +2,14 @@
 Quick installation of mining on Android Phones
 
 ## No support
-- Although the installation procedure is considered doable for people that have zero to little Linux knowledge, I do **not** provide any support to users that do not know their way around linux.
-- Some fundamental Linux knowledge is *required*. (do an online coarse!)
-- Knowledge about how to operate Linux *screen* is a must, knowledge on *ssh* and *scp* is highly recommended.
-- Stable network (WiFi/cellular) is a must for proper operation. Be prepared to troubleshoot and fix them.
+- Although the installation procedure is considered doable for people that have zero to little Linux knowledge, I do **not** provide any support to users that that mess up as a result of lack of knowledge.
 - Reading is an dying art. There's no instruction video for people that can't follow instructions step-by-step.
+
+## Prerequisites
+- Some fundamental Linux knowledge is *required*. (do an online coarse!)
+- Knowledge about how to operate Linux *screen* is a must.
+- Knowledge on *ssh* and *scp* is highly recommended.
+- Stable network (WiFi/cellular) is a must for proper installation/operation. Be prepared to troubleshoot and fix them yourself.
 
 ## Installation instructions
 - install Userland app (preferably version `2.8.3` from appstore or a downloaded apk) on your Android
