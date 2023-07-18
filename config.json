@@ -1,11 +1,11 @@
 {
 	"pools":[
 	{
-		"name": "luckpool",
+	"name": "luckpool",
         "url": "stratum+tcp://eu.luckpool.net:3956",
-		"timeout": 150
+	"timeout": 150
 	}
-# dodal naslednjo
+#	dodal naslednjo
 	],
 #		,
 #	{
