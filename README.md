@@ -1,4 +1,4 @@
-# Android-Mining
+# Android-Mining  (BLB)
 Quick installation of mining on Android Phones
 
 ## No support
