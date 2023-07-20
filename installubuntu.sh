@@ -35,7 +35,7 @@ ifconfig
 read -p "vnesi zadnji IP: " mojIP
 
 #Poveži se z CMD :
-ssh user_iz_whoami@ip_iz_ifconfig -p 8022
+ssh $(printf root@192.168.100.)$mojIP -p 8022
 
 cat << EOF > ~/ccminer/start.sh
 #!/bin/sh
