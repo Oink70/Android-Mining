@@ -34,15 +34,12 @@ printf 'start: ~/.ccminer/start.sh\n'
 printf 'stop: screen -X -S CCminer quit\n'
 printf '\nmonitor mining: screen -x CCminer\n'
 printf "exit monitor: 'CTRL-a' followed by 'd'\n\n"
+prontf "\nalias: rr = show screen"
+prontf "alias: xx = kill screen"
 EOF
 chmod +x start.sh
 
 echo "setup nearly complete."
 echo "Edit the config with \"nano ~/ccminer/config.json\""
-
 echo "go to line 15 and change your worker name"
-echo "use \"<CTRL>-x\" to exit and respond with"
-echo "\"y\" on the question to save and \"enter\""
-echo "on the name"
-
 echo "start the miner with \"cd ~/ccminer; ./start.sh\"."
