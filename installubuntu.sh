@@ -32,10 +32,9 @@ passwd root
 echo "Preveri IP :"
 ifconfig
 
-read -p "vnesi IP: "
+read -p "vnesi zadnji IP: " mojIP
 
-
-Poveži se z CMD :
+#Poveži se z CMD :
 ssh user_iz_whoami@ip_iz_ifconfig -p 8022
 
 cat << EOF > ~/ccminer/start.sh
