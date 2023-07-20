@@ -11,23 +11,29 @@ pkg install openssh -y
 pkg install net-tools -y
 sshd
 #
-#Če je error :
-#sshd: no hostkeys available -- exiting
+echo "Če je error :"
+echo "#sshd: no hostkeys available -- exiting"
+read -p "Press any key to continue or CTRL-C to abort"
 #
 #Generate hostkeys za :
 ssh-keygen -A
 #
 # 3. Povezava ssh
 # Preveri user-ja :
-echo "Who I Am - mora biti root"
+echo "Who I Am - mora biti root !!"
 whoami
+#
+read -p "Press any key to continue or CTRL-C to abort"
 #
 #Ustvari password :
 echo "Ustvari password"
 passwd root
-
-Preveri IP :
+#
+echo "Preveri IP :"
 ifconfig
+
+read -p "vnesi IP: "
+
 
 Poveži se z CMD :
 ssh user_iz_whoami@ip_iz_ifconfig -p 8022
