@@ -24,7 +24,7 @@ whoami
 #
 #Ustvari password :
 echo "Ustvari password"
-passwd user_iz_whoami
+passwd root
 
 Preveri IP :
 ifconfig
