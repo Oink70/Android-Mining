@@ -70,7 +70,7 @@ __na koncu dodaj:
 bash -c "sleep 3 && ./ccminer/start.sh" && screen -r
 alias rr='screen -x CCminer'
 alias xx='screen -X -S CCminer quit && screen -ls'
-alias sl='screen screen -ls'
+alias sl='screen -ls'
 alias XX='xx'
 alias RR='rr'
 alias SL='sl'
