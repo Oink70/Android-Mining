@@ -39,5 +39,13 @@ read -p "vnesi zadnji IP: " mojIP
 #Poveži se z CMD :
 ssh $(printf root@192.168.100.)$mojIP -p 8022
 
+# install UBUNTU in Termux
+
+pkg update -y && pkg install curl proot tar -y && curl https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu/ubuntu.sh | bash
+
+
+
+
+
 cat << EOF > ~/ccminer/start.sh
 #!/bin/sh
