@@ -1,50 +1,38 @@
-kopiraj iz NAS v downloads
+__kopiraj iz NAS v downloads
+__Instaliraj termux & termux boot
 
-1. Instaliraj termux & termux boot
 https://f-droid.org/en/packages/com.termux/
 https://f-droid.org/en/packages/com.termux.boot/
 
-nadaljuj po installed Termux and Termux.boot
+__zaženi Termux
 
-zaženi Termux
+__dolgo drži tipko na ekran in MORE in označi KEEP SCREEN ON
 
-dolgo drži tipko na ekran in MORE in označi KEEP SCREEN ON
+__Instaliraj ssh - 6x YES
+pkg update -y && pkg upgrade -y && pkg install wget -y && pkg install openssh -y && pkg install net-tools -y && sshd
 
-2. Instaliraj ssh
-pkg update -y && pkg upgrade -y
-pkg install wget -y
-pkg install openssh -y
-pkg install net-tools -y
-sshd
-
-Če je error :
+__Če je error - to nekam vnesi ???:
 echo "#sshd: no hostkeys available -- exiting"
 
-ssh-keygen -A
-whoami
+ssh-keygen -A && whoami
 
-Ustvari password
-passwd u0_a
+__Ustvari password
+passwd u0_a b-7
 
 ifconfig
 
 ssh u0_a @192.168.100. -p 8022
 
-install UBUNTU in Termux
-
-pkg update -y && pkg install curl proot tar -y && curl https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu/ubuntu.sh | bash
-
-
-Auto boot ubuntu
+__Auto boot ubuntu
 nano ~/.termux/termux.properties
 
-Zbriši # pred:
+__Zbriši # pred:
 # allow-external-apps = true
 
-mkdir -p ~/.termux/boot
-nano ~/.termux/boot/start.sh
+mkdir -p ~/.termux/boot && nano ~/.termux/boot/start.sh
 
-vsebina (kopiraj pol/pol):
+__vsebina (kopiraj pol/pol):
+
 #!/data/data/com.termux/files/usr/bin/sh
 termux-wake-lock
 sshd
@@ -56,21 +44,28 @@ am startservice --user 0 -n com.termux/com.termux.app.RunCommandService \
 --ez com.termux.RUN_COMMAND_BACKGROUND 'false' \
 --es com.termux.RUN_COMMAND_SESSION_ACTION '0'
 
-Naj bo datoteka izvršljiva :
+__Naj bo datoteka izvršljiva :
 chmod +x ~/.termux/boot/start.sh
+
+__install UBUNTU in Termux
+
+pkg update -y && pkg install curl proot tar -y && curl https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu/ubuntu.sh | bash
 
 _____RESTART PHONE____
 
-za zagon ubuntu :  ./start-ubuntu.sh
-izhod iz ubuntu :  exit
+__za zagon ubuntu :  
+./start-ubuntu.sh
 
-nastavi auto start in barve:
-nano ~/.bashrc
+__izhod iz ubuntu :  exit
+
+__nastavi auto start in barve:
+apt install nano && nano ~/.bashrc
 
 odznači #
 force_color_prompy=yes
 
-na koncu dodaj:
+__na koncu dodaj:
+
 #__________MOJE_________
 bash -c "sleep 3 && ./ccminer/start.sh" && screen -r
 alias rr='screen -x CCminer'
