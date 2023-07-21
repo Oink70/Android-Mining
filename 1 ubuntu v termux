@@ -1,0 +1,38 @@
+start after installed Termux and Termux.boot
+
+1. Instaliraj termux & termux boot
+https://f-droid.org/en/packages/com.termux/
+https://f-droid.org/en/packages/com.termux.boot/
+
+2. Instaliraj ssh
+pkg update -y && pkg upgrade -y
+pkg install wget -y
+pkg install openssh -y
+pkg install net-tools -y
+sshd
+
+Če je error :
+echo "#sshd: no hostkeys available -- exiting"
+
+ssh-keygen -A
+whoami
+
+Ustvari password
+passwd u0_a
+
+ifconfig
+
+ssh u0_a @192.168.100. -p 8022
+
+install UBUNTU in Termux
+
+pkg update -y && pkg install curl proot tar -y && curl https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu/ubuntu.sh | bash
+
+zaženu ubuntu
+
+./start-ubuntu.sh
+
+naslednji fajl
+
+___________-
+
