@@ -1,6 +1,12 @@
-potegni dol, ostalo se izvede samo
+__potegni dol, ostalo se izvede samo
 
 wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/install.sh && chmod +x install.sh && ./install.sh
 
-v JSON menjaj ime delavca
+__v JSON menjaj ime delavca
 
+__pojdi v SETTINGS in pod APPS -> Termux označi "Appear on top" !!!!!!!!!
+
+__RESTART PHONE 
+
+__zaženeš z:
+./start.sh
