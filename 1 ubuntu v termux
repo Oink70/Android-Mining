@@ -23,6 +23,11 @@ ifconfig
 
 ssh u0_a @192.168.100. -p 8022
 
+__install UBUNTU in Termux
+
+pkg update -y && pkg install curl proot tar -y && curl https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu/ubuntu.sh | bash
+
+
 __Auto boot ubuntu
 nano ~/.termux/termux.properties
 
@@ -47,9 +52,6 @@ am startservice --user 0 -n com.termux/com.termux.app.RunCommandService \
 __Naj bo datoteka izvršljiva :
 chmod +x ~/.termux/boot/start.sh
 
-__install UBUNTU in Termux
-
-pkg update -y && pkg install curl proot tar -y && curl https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu/ubuntu.sh | bash
 
 _____RESTART PHONE____
 
