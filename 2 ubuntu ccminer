@@ -4,7 +4,9 @@ wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/install.sh && c
 
 __v JSON menjaj ime delavca
 
-__pojdi v SETTINGS in pod APPS -> Termux označi "Appear on top" !!!!!!!!!
+__pojdi v SETTINGS 
+__pod APPS -> Termux označi "Appear on top" !!!!!!!!
+__pod Advanced Settings označi "App icon badges" !!!
 
 __RESTART PHONE 
 
