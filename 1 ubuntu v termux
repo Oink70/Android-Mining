@@ -34,5 +34,6 @@ zaženu ubuntu
 
 naslednji fajl
 
-___________-
-
+___________
+#!/data/data/com.termux/files/usr/bin/bash
+cd $(dirname $0)
