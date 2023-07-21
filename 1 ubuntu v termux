@@ -55,15 +55,28 @@ am startservice --user 0 -n com.termux/com.termux.app.RunCommandService \
 Naj bo datoteka izvršljiva :
 chmod +x ~/.termux/boot/start.sh
 
-RESTART PHONE
+_____RESTART PHONE____
 
-za zagon ubuntu
+za zagon ubuntu :  ./start-ubuntu.sh
+izhod iz ubuntu :  exit
 
-./start-ubuntu.sh
+nastavi auto start in barve:
+nano ~/.bashrc
 
-izhod iz ubuntu
+odznači #
+force_color_prompy=yes
 
-exit
+na koncu dodaj:
+#__________MOJE_________
+bash -c "sleep 3 && ./ccminer/start.sh" && screen -r
+alias rr='screen -x CCminer'
+alias xx='screen -X -S CCminer quit && screen -ls'
+alias sl='screen screen -ls'
+alias XX='xx'
+alias RR='rr'
+alias SL='sl'
+
+
 
 naslednji fajl
 
