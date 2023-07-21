@@ -1,9 +1,10 @@
 #!/bin/sh
 # start after installed Termux and Termux.boot
 #
-# 1. Instaliraj termux & termux boot
-# https://f-droid.org/en/packages/com.termux/
-# https://f-droid.org/en/packages/com.termux.boot/
+echo  "1. Instaliraj termux & termux boot"
+echo  "https://f-droid.org/en/packages/com.termux/"
+echo  "https://f-droid.org/en/packages/com.termux.boot/"
+read -p "Press any key to continue or CTRL-C to abort"
 #
 # 2. Instaliraj ssh
 pkg update -y && pkg upgrade -y
