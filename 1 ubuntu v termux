@@ -4,6 +4,8 @@ start after installed Termux and Termux.boot
 https://f-droid.org/en/packages/com.termux/
 https://f-droid.org/en/packages/com.termux.boot/
 
+dolgo drži tipko na ekran in MORE in označi KEEP SCREEN ON
+
 2. Instaliraj ssh
 pkg update -y && pkg upgrade -y
 pkg install wget -y
@@ -28,9 +30,40 @@ install UBUNTU in Termux
 
 pkg update -y && pkg install curl proot tar -y && curl https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu/ubuntu.sh | bash
 
-zaženu ubuntu
+
+Auto boot ubuntu
+nano ~/.termux/termux.properties
+
+Zbriši # pred:
+# allow-external-apps = true
+
+mkdir -p ~/.termux/boot
+nano ~/.termux/boot/start.sh
+
+vsebina (kopiraj pol/pol):
+#!/data/data/com.termux/files/usr/bin/sh
+termux-wake-lock
+sshd
+am startservice --user 0 -n com.termux/com.termux.app.RunCommandService \
+-a com.termux.RUN_COMMAND \
+
+--es com.termux.RUN_COMMAND_PATH '~/start-ubuntu.sh' \
+--es com.termux.RUN_COMMAND_WORKDIR '/data/data/com.termux/files/home' \
+--ez com.termux.RUN_COMMAND_BACKGROUND 'false' \
+--es com.termux.RUN_COMMAND_SESSION_ACTION '0'
+
+Naj bo datoteka izvršljiva :
+chmod +x ~/.termux/boot/start.sh
+
+RESTART PHONE
+
+za zagon ubuntu
 
 ./start-ubuntu.sh
+
+izhod iz ubuntu
+
+exit
 
 naslednji fajl
 
