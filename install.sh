@@ -53,6 +53,7 @@ echo "start the miner with \"cd ~/ccminer; ./start.sh\"."
 
 # read -p "Press any key to EDIT JSON or CTRL-C to abort"
 
-cd ~/ccminer
-
 nano ~/ccminer/config.json
+
+cd ~/ccminer
+ls
