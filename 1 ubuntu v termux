@@ -61,7 +61,7 @@ __za zagon ubuntu :
 __izhod iz ubuntu :  exit
 
 __nastavi auto start in barve:
-apt install nano screen && nano ~/.bashrc
+apt install -y nano screen && nano ~/.bashrc
 
 odznači #
 force_color_prompy=yes
