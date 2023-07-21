@@ -45,8 +45,8 @@ echo "Edit the config with \"nano ~/ccminer/config.json\""
 echo "go to line 15 and change your worker name"
 echo "start the miner with \"cd ~/ccminer; ./start.sh\"."
 
-read -p "Press any key to EDIT JSON or CTRL-C to abort"
+# read -p "Press any key to EDIT JSON or CTRL-C to abort"
 
-cd ccminer
+cd ./ccminer
 
-nano config.json
+nano ./ccminer/config.json
