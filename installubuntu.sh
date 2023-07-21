@@ -8,6 +8,7 @@ read -p "Press any key to continue or CTRL-C to abort"
 #
 # 2. Instaliraj ssh
 pkg update -y && pkg upgrade -y
+pkg install wget
 pkg install openssh -y
 pkg install net-tools -y
 sshd
