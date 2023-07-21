@@ -78,9 +78,29 @@ alias RR='rr'
 alias SL='sl'
 
 
+__potegni dol, ostalo se izvede samo
 
-naslednji fajl
+wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/install.sh && chmod +x install.sh && ./install.sh
 
-___________
+__v JSON menjaj ime delavca
+
+__pojdi v SETTINGS 
+__pod APPS -> Termux označi "Appear on top" !!!!!!!!
+__pod Advanced Settings označi "App icon badges" !!!
+
+__potregni dol ekran in vklopi: "Acquire Wakelock"  ->  (wake lock held)
+
+__na "Stop optimizing battery ... "  -> Alow
+
+__RESTART PHONE 
+
+__zaženeš z:
+./start.sh
+
+______________________________________________________________________________
+
+
+tako se štarta sh v termux - ???
+
 #!/data/data/com.termux/files/usr/bin/bash
 cd $(dirname $0)
