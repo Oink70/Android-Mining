@@ -45,3 +45,5 @@ echo "go to line 15 and change your worker name"
 echo "start the miner with \"cd ~/ccminer; ./start.sh\"."
 
 cd ccminer
+
+nano config.json
