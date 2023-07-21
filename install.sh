@@ -36,6 +36,7 @@ printf '\nmonitor mining: screen -x CCminer\n'
 printf "exit monitor: 'CTRL-a' followed by 'd'\n\n"
 printf "\nalias: rr = show screen\n"
 printf "alias: xx = kill screen\n"
+printf "alias: sl = list screen\n"
 EOF
 chmod +x start.sh
 
