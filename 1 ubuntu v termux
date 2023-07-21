@@ -86,7 +86,8 @@ __v JSON menjaj ime delavca
 
 __pojdi v SETTINGS 
 __pod APPS -> Termux označi "Appear on top" !!!!!!!!
-__pod Advanced Settings označi "App icon badges" !!!
+__S10 pod Advanced Settings označi "App icon badges" !!!
+__J7 pod ...  "Custom restr." odznači "Hide notif. dots on app icons"
 
 __potregni dol ekran in vklopi: "Acquire Wakelock"  ->  (wake lock held)
 
