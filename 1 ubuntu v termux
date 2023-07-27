@@ -55,7 +55,9 @@ chmod +x ~/.termux/boot/start.sh
 
 _____RESTART PHONE____
 
-__za zagon ubuntu :  
+zaženi TERMUX in avtomatsko se mora postavitiv UBUNTU (malo počakaj)
+
+__če ne - zagon ubuntu :  
 ./start-ubuntu.sh
 
 __izhod iz ubuntu :  exit
