@@ -82,11 +82,11 @@ alias SL='sl'
 
 ___ alias rr='screen -x CCminer' && alias xx='screen -X -S CCminer quit && screen -ls' && alias sl='screen -ls' && alias XX='xx' && alias RR='rr' && alias SL='sl'
 
-__potegni dol, ostalo se izvede samo
+__link na github, ostalo se izvede samo
 
 wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/install.sh && chmod +x install.sh && ./install.sh
 
-__v JSON menjaj ime delavca
+__v JSON menjaj ime delavca - se postavi avtomatsko
 
 __pojdi v SETTINGS 
 __pod APPS -> Termux označi "Appear on top" !!!!!!!!
