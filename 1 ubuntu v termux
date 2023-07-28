@@ -21,7 +21,7 @@ passwd u0_a b-7
 
 ifconfig
 
-ssh u0_a @192.168.100. -p 8022
+ssh u0_a@192.168.100. -p 8022
 
 __install UBUNTU in Termux
 
