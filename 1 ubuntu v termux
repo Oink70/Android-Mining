@@ -62,6 +62,8 @@ __če ne - zagon ubuntu :
 
 __izhod iz ubuntu :  exit
 
+--->  v UBUNTU !!!
+
 __nastavi auto start in barve:
 apt install -y nano screen && nano ~/.bashrc
 
@@ -106,7 +108,11 @@ __zaženeš UBUNTU, če se ni sam ga z:
 
 ______________________________________________________________________________
 
+__to get temps in userland, if its a phone, ssh into it and run these commands 
 
+sudo apt install -y bsdmainutils && paste <(cat /sys/class/thermal/thermal_zone/type) <(cat /sys/class/thermal/thermal_zone/temp) | column -s $'\t' -t | sed 's/(.)..$/.\1°C/'
+
+______________________________________________________________________________
 tako se štarta sh v termux - ???
 
 #!/data/data/com.termux/files/usr/bin/bash
