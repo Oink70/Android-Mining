@@ -112,6 +112,11 @@ __to get temps in userland, if its a phone, ssh into it and run these commands
 
 sudo apt install -y bsdmainutils && paste <(cat /sys/class/thermal/thermal_zone/type) <(cat /sys/class/thermal/thermal_zone/temp) | column -s $'\t' -t | sed 's/(.)..$/.\1°C/'
 
+updated command, add | awk '$0~/cpu/' to the end of the command to show temps matching cpu
+
+ok, so cpu temps may not be it, there is also back_temp and front_temp, maybe those are the temps too look for, then instead of awk '$0~/cpu/' use awk '$0 ~/temp/'
+
+
 ______________________________________________________________________________
 tako se štarta sh v termux - ???
 
