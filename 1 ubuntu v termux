@@ -110,7 +110,8 @@ ______________________________________________________________________________
 
 __to get temps in userland, if its a phone, ssh into it and run these commands 
 
-sudo apt install -y bsdmainutils && paste <(cat /sys/class/thermal/thermal_zone/type) <(cat /sys/class/thermal/thermal_zone/temp) | column -s $'\t' -t | sed 's/(.)..$/.\1°C/'
+sudo apt install -y bsdmainutils
+paste <(cat /sys/class/thermal/thermal_zone/type) <(cat /sys/class/thermal/thermal_zone/temp) | column -s $'\t' -t | sed 's/(.)..$/.\1°C/' | awk '$0~/cpu/'
 
 updated command, add | awk '$0~/cpu/' to the end of the command to show temps matching cpu
 
