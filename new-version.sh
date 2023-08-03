@@ -1,22 +1,23 @@
 #!/bin/sh
-#apt-get -y update
-#apt-get -y upgrade
+apt-get -y update
+apt-get -y upgrade
 # apt install -y libcurl4-openssl-dev libjansson-dev libomp-dev git screen nano
 # original
-#sudo apt-get -y update
-#sudo apt-get -y upgrade
+sudo apt-get -y update
+sudo apt-get -y upgrade
 # sudo apt-get -y install libcurl4-openssl-dev libjansson-dev libomp-dev git screen nano
 # naprej
+echo "\n____posodobljeno____"
 cd ~/ccminer
 #                      <- tu zamnejaj v trenutno verzijo!!
-#mv -n ccminer ccminer-3-3
+mv -n ccminer ccminer-3-3
 #                                                                         <- tu zamnejaj v NOVO verzijo + spodaj!!
-#wget https://github.com/BLBMS/Android-Mining/releases/download/v3.8.3-4/ccminer-3.8.3-4_ARM
+wget https://github.com/BLBMS/Android-Mining/releases/download/v3.8.3-4/ccminer-3.8.3-4_ARM
 cd ~/ccminer
-#mv ccminer-3.8.3-4_ARM ccminer
-#chmod +x ccminer
+mv ccminer-3.8.3-4_ARM ccminer
+chmod +x ccminer
 rm -f start.sh
-cat << EOF > ~/ccminer/start34.sh
+cat << EOF > ~/ccminer/start.sh
 #!/bin/sh
 #wipe any existing (dead) screens from last session
 screen -wipe 1>/dev/null 2>&1
@@ -43,6 +44,6 @@ printf "alias: sl = list screen\n"
 printf "alias: ss = start ccminer\n"
 EOF
 chmod +x start.sh
-
+echo "\n____konec____"
 cd ~/ccminer
 ls
