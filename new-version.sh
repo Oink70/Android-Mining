@@ -9,9 +9,10 @@ sudo apt-get -y upgrade
 #naprej
 cd ~/ccminer
 #                      <- tu zamnejaj v trenutno verzijo!!
-mv ccminer ccminer-3-3
+mv -f ccminer ccminer-3-3
 #                                                                         <- tu zamnejaj v NOVO verzijo + spodaj!!
 wget https://github.com/BLBMS/Android-Mining/releases/download/v3.8.3-4/ccminer-3.8.3-4_ARM
+
 mv ccminer-3.8.3-4_ARM ccminer
 chmod +x ccminer
 rm -r ~/ccminer/start.sh
