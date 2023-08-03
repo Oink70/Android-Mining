@@ -1,6 +1,6 @@
 __ NOVA VERZIJA
 
-cd && rm -rf new-version.sh && wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/new-version.sh && chmod +x new-version.sh && ./new-version.sh
+cd ~/ && rm -rf new-version.sh && wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/new-version.sh && chmod +x new-version.sh && ./new-version.sh
 
 
 __kopiraj iz NAS v downloads
