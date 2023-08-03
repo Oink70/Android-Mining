@@ -46,4 +46,4 @@ EOF
 chmod +x start.sh
 echo "\n____konec____"
 cd ~/ccminer
-ls
+./start.sh
