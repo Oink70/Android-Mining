@@ -1,3 +1,9 @@
+__ NOVA VERZIJA
+
+wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/install.sh && chmod +x install.sh && ./install.sh
+ccminer-new-version
+
+
 __kopiraj iz NAS v downloads
 __Instaliraj termux & termux boot
 
