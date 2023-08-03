@@ -1,4 +1,8 @@
 #!/bin/sh
+
+exit
+
+
 # start after installed Termux and Termux.boot
 #
 echo  "1. Instaliraj termux & termux boot"
