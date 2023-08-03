@@ -16,8 +16,8 @@ echo "#sshd: no hostkeys available -- exiting"
 
 ssh-keygen -A && whoami
 
-__Ustvari password
-passwd u0_a b-7
+__Ustvari password b-7
+passwd u0_a
 
 ifconfig
 
@@ -26,7 +26,6 @@ ssh u0_a@192.168.100. -p 8022
 __install UBUNTU in Termux
 
 pkg update -y && pkg install curl proot tar -y && curl https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu/ubuntu.sh | bash
-
 
 __Auto boot ubuntu
 nano ~/.termux/termux.properties
@@ -62,7 +61,7 @@ __če ne - zagon ubuntu :
 
 __izhod iz ubuntu :  exit
 
---->  v UBUNTU !!!
+--->  kopiraš v UBUNTU !!!
 
 __nastavi auto start in barve:
 apt install -y nano screen && nano ~/.bashrc
@@ -77,12 +76,14 @@ bash -c "sleep 3 && ./ccminer/start.sh" && screen -r
 alias rr='screen -x CCminer'
 alias xx='screen -X -S CCminer quit && screen -ls'
 alias sl='screen -ls'
+alias ss='~/ccminer/start.sh'
 alias XX='xx'
 alias RR='rr'
 alias SL='sl'
+alias SS='ss'
 
 
-___ alias rr='screen -x CCminer' && alias xx='screen -X -S CCminer quit && screen -ls' && alias sl='screen -ls' && alias XX='xx' && alias RR='rr' && alias SL='sl'
+___ alias rr='screen -x CCminer' && alias xx='screen -X -S CCminer quit && screen -ls' && alias sl='screen -ls' && alias ss='~/ccminer/start.sh' && alias XX='xx' && alias RR='rr' && alias SL='sl' && alias SS='ss'
 
 __link na github, ostalo se izvede samo
 
