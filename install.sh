@@ -72,7 +72,22 @@ printf "exit: CTRL-a + d\e[0m\n"
 EOF
 chmod +x start.sh
 # zamenjava imena delavca v .json
-nano ~/ccminer/config.json
+printf "\n\e[93m IME DELAVCA: \e[0m"
+read delavec
+printf "\n\e[93m ime delavca je: "
+echo $delavec
+printf "\e[0m\n"
+cd ~/
+rm -f *.ww worker
+cat << EOF > ~/worker
+EOF
+echo $delavec >> ~/worker
+cat << EOF > $delavec.ww
+EOF
+printf "\n\e[93m delavec v config.json\e[0m"
+sed -i "0,/BLB/ s//$delavec/" ~/ccminer/config.json
+# zdaj ne rabim nano
+#nano ~/ccminer/config.json
 cd ~/ccminer
 ls
 printf "\n\e[93mss = start ccminer\n"
