@@ -39,5 +39,5 @@ ls
 printf "%s " "Enter to continue"
 read ans
 screen -X -S CCminer quit
-exit
-exit
+printf "\n\e[93m vtipkaj: exit\e[0m\n"
+printf "\n\e[93m ponovno zaženi ubuntu\e[0m\n"
