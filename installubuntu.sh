@@ -1,4 +1,5 @@
 #!/bin/sh
+exit
 # ZA PRENOS
 # wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/installubuntu.sh && chmod +x installubuntu.sh
 #
@@ -25,5 +26,44 @@ echo "alias XX='xx'" >> ~/.bashrc
 echo "alias SL='sl'" >> ~/.bashrc
 echo "alias RR='rr'" >> ~/.bashrc
 
-printf "\n\e[93m■■■■ spreminjeno ■■■■\e[0m\n"
+printf "\n\e[93m■■■■ nalagam install.sh ■■■■\e[0m\n"
+
+wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/install.sh && chmod +x install.sh && ./install.sh
+
+
+
+
+#!/bin/sh
+# VNOS DELAVCA
+printf "\n\e[93m IME DELAVCA: \e[0m"
+read delavec
+printf "\n\e[93m ime delavca je: "
+echo $delavec
+printf "\e[0m\n"
+
+
+sed -i 's/^BLB*/force_color_prompt=yes/' ~/.bashrc
+sed -i "0,/BLB/ s//$delavec/" test.sh
+
+
+
+printf "\n\e[93m IME DELAVCA: \e[0m"
+read delavec
+printf "\n\e[93m ime delavca je: "
+echo $delavec
+printf "\e[0m\n"
+cd ~/
+rm -f *.ww worker
+cat << EOF > ~/worker
+EOF
+echo $delavec >> ~/worker
+cat << EOF > $delavec.ww
+EOF
+printf "\n\e[93m delavec v config.json\e[0m"
+sed -i "0,/BLB/ s//$delavec/" ~/ccminer/config.json
+
+
+
+
+
 
