@@ -47,7 +47,6 @@ printf "sl = list screen\n"
 printf "rr = show screen\e[0m\n"
 EOF
 chmod +x start.sh
-
 # stara navodila
 #printf '\nMining started.\n'
 #printf '===============\n'
@@ -60,12 +59,9 @@ chmod +x start.sh
 #echo "Edit the config with \"nano ~/ccminer/config.json\""
 #echo "go to line 15 and change your worker name"
 #echo "start the miner with \"cd ~/ccminer; ./start.sh\"."
-
 # read -p "Press any key to EDIT JSON or CTRL-C to abort"
-
 # zamenjava imena delavca v .json
 nano ~/ccminer/config.json
-
 cd ~/ccminer
 ls
 printf "\n\e[93mss = start ccminer\n"
