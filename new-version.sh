@@ -32,17 +32,14 @@ screen -S CCminer -X quit 1>/dev/null 2>&1
 screen -wipe 1>/dev/null 2>&1
 #create new disconnected session CCminer
 screen -dmS CCminer 1>/dev/null 2>&1
+#
 #run the miner
 screen -S CCminer -X stuff "~/ccminer/ccminer -c ~/ccminer/config.json\n" 1>/dev/null 2>&1
-#printf '\nManual:\n'
-#printf 'start       : ss  or  ~/.ccminer/start.sh\n'
-#printf 'stop        : xx  or  screen -X -S CCminer quit\n'
-#printf '\nmonitoring: rr  or  screen -x CCminer\n'
-#printf "exit monitor: 'CTRL-a' followed by 'd'\n"
+#
 printf "\n\e[93mss = start ccminer\n"
 printf "xx = kill screen\n"
 printf "sl = list screen\n"
-printf "\nrr = show screen\e[0m\n"
+printf "rr = show screen\e[0m\n"
 EOF
 chmod +x start.sh
 printf "\n\e[93m■■■■ posodobljeno + zagon start.sh ■■■■\e[0m\n"
