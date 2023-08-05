@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 #exit
 printf "\n\e[93m!! start after installed Termux and UBUNTU is started !!\e[0m\n"
-read -p "Any key or CTRL-C to abort"
+read -rsn1 -p "Any key or CTRL-C to abort"
 
 printf "\n\e[93m■■■■ spreminajm ~/.bashrc ■■■■\e[0m\n"
 
