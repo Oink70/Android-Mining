@@ -30,36 +30,27 @@ cat << EOF > ~/ccminer/start.sh
 #wipe any existing (dead) screens from last session
 screen -wipe 1>/dev/null 2>&1
 #check if ccminer is allready running
-if screen -ls | grep -i ccminer; then echo "... CCminer is running! ..."; exit 0; fi
-#exit existing screens with the name CCminer
-screen -S CCminer -X quit 1>/dev/null 2>&1
-#wipe any existing (dead) screens)
-screen -wipe 1>/dev/null 2>&1
-#create new disconnected session CCminer
-screen -dmS CCminer 1>/dev/null 2>&1
-#
-#run the miner
-screen -S CCminer -X stuff "~/ccminer/ccminer -c ~/ccminer/config.json\n" 1>/dev/null 2>&1
-#
+if screen -ls | grep -i ccminer;
+then
+  printf "\n\e[93m■■■ CCminer is running! ■■■\e[0m\n"
+else
+  printf "\n\e[93m■■■ Starting CCminer! ■■■\e[0m\n"
+  #exit existing screens with the name CCminer
+  screen -S CCminer -X quit 1>/dev/null 2>&1
+  #wipe any existing (dead) screens)
+  screen -wipe 1>/dev/null 2>&1
+  #create new disconnected session CCminer
+  screen -dmS CCminer 1>/dev/null 2>&1
+  #run the miner
+  screen -S CCminer -X stuff "~/ccminer/ccminer -c ~/ccminer/config.json\n" 1>/dev/null 2>&1
+fi
 printf "\n\e[93mss = start ccminer\n"
 printf "xx = kill screen\n"
 printf "sl = list screen\n"
-printf "rr = show screen\e[0m\n"
+printf "rr = show screen\n"
+printf "exit: CTRL-a + d\e[0m\n"
 EOF
 chmod +x start.sh
-# stara navodila
-#printf '\nMining started.\n'
-#printf '===============\n'
-#printf '\nManual:\n'
-#printf 'start: ss  or  ~/.ccminer/start.sh\n'
-#printf 'stop: xx  or  screen -X -S CCminer quit\n'
-#printf '\nmonitor mining: rr  or  screen -x CCminer\n'
-#printf "exit monitor: 'CTRL-a' followed by 'd'\n\n"
-#echo "setup nearly complete."
-#echo "Edit the config with \"nano ~/ccminer/config.json\""
-#echo "go to line 15 and change your worker name"
-#echo "start the miner with \"cd ~/ccminer; ./start.sh\"."
-# read -p "Press any key to EDIT JSON or CTRL-C to abort"
 # zamenjava imena delavca v .json
 nano ~/ccminer/config.json
 cd ~/ccminer
