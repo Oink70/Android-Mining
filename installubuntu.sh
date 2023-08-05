@@ -1,4 +1,7 @@
 #!/bin/sh
+# ZA PRENOS
+# wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/installubuntu.sh && chmod +x installubuntu.sh
+#
 #exit
 printf "\n\e[93m!! start after installed Termux and UBUNTU is started !!\e[0m\n"
 printf "%s " "Enter to continue or CTRL-C to abort"
