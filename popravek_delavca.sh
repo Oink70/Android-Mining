@@ -1,5 +1,7 @@
 #!/bin/sh
 
+#  wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/popravek_delavca.sh && chmod +x popravek_delavca.sh && ./popravek_delavca.sh
+
 echo "alias ss='~/ccminer/start.sh'" >> ~/.bashrc
 echo "alias SS='ss'" >> ~/.bashrc
 
@@ -13,6 +15,7 @@ __ vse v enem
 
 #  nano ~/.bashrc
 
+cd ~/
 printf "\n\e[93m IME DELAVCA: \e[0m"
 read delavec
 printf "\n\e[93m ime delavca je: "
@@ -28,3 +31,4 @@ EOF
 printf "\n\e[93m delavec v config.json\e[0m"
 sed -i "0,/$delavecTO/ s//$delavec/" ~/ccminer/config.json
 cat ~/ccminer/config.json
+rm popravek_delavca.sh
