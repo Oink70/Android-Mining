@@ -65,7 +65,7 @@ __izhod iz ubuntu :  exit
 --->  kopiraš v UBUNTU !!!
 __ vse se nastavi samo, samo menjaj ime delavca - se postavi avtomatsko
 
-wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/installubuntu.sh && chmod +x installubuntu.sh
+wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/install.sh && chmod +x install.sh &&./install.sh
 
 __pojdi v SETTINGS 
 __pod APPS -> Termux označi "Appear on top" !!!!!!!!
