@@ -30,8 +30,8 @@ cat << EOF > $delavec.ww
 EOF
 printf "\n\e[93m delavec v config.json\e[0m"
 screen -X -S CCminer quit
+delavecTO="${delavec}TO"
 sed -i "0,/$delavecTO/ s//$delavec/" ~/ccminer/config.json
-cat ~/ccminer/config.json
 rm popravek_delavca.sh
 ls
 printf "%s " "Enter to continue"
