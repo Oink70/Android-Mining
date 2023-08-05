@@ -21,8 +21,10 @@ mkdir ~/ccminer
 cd ~/ccminer
 wget https://github.com/BLBMS/Android-Mining/releases/download/v3.8.3-4/ccminer-3.8.3-4_ARM
 wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/config.json
+wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/posodobi.sh
 mv ccminer-3.8.3-4_ARM ccminer
 chmod +x ccminer
+chmod +x posodobi.sh
 cat << EOF > ~/ccminer/start.sh
 #!/bin/sh
 #wipe any existing (dead) screens from last session
