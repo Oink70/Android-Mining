@@ -1,6 +1,6 @@
 #!/bin/sh
 # POSODOBI fajl NOVA VERZIJA
-cd ~/
+cd ~/ccminer
 rm -rf new-version.sh
 echo -e "\e[93m■■■■ prenašam: new-version.sh ■■■■\e[0m"
 wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/new-version.sh
