@@ -33,8 +33,11 @@ screen -X -S CCminer quit
 delavecTO="${delavec}TO"
 sed -i "0,/$delavecTO/ s//$delavec/" ~/ccminer/config.json
 rm popravek_delavca.sh
+printf "\n\e[93m config.json\e[0m\n"
 cat ~/ccminer/config.json
 ls
 printf "%s " "Enter to continue"
 read ans
-~/ccminer/start.sh
+screen -X -S CCminer quit
+exit
+exit
