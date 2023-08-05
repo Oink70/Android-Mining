@@ -1,0 +1,2 @@
+echo alias ss='~/ccminer/start.sh' >> ~/.bashrc
+echo alias SS='ss' >> ~/.bashrc
