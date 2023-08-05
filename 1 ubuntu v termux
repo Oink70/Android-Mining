@@ -57,13 +57,41 @@ chmod +x ~/.termux/boot/start.sh
 _____RESTART PHONE____
 
 zaženi TERMUX in avtomatsko se mora postavitiv UBUNTU (malo počakaj)
-
 __če ne - zagon ubuntu :  
 ./start-ubuntu.sh
-
 __izhod iz ubuntu :  exit
 
+
 --->  kopiraš v UBUNTU !!!
+__ vse se nastavi samo, samo menjaj ime delavca - se postavi avtomatsko
+
+wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/installubuntu.sh && chmod +x installubuntu.sh
+
+__pojdi v SETTINGS 
+__pod APPS -> Termux označi "Appear on top" !!!!!!!!
+__S10 pod "Notification/Advanced Settings" označi "App icon badges" "Battery percentage" !!!
+__J7 pod ...  "Custom restr." odznači "Hide notif. dots on app icons"
+
+__potregni dol ekran in vklopi: "Acquire Wakelock"  ->  (wake lock held)
+
+__na "Stop optimizing battery ... "  -> Alow
+
+__zaženi Termux.BOOT
+
+__RESTART PHONE
+
+__zaženeš UBUNTU, če se ni sam ga z:
+./start-ubuntu.sh
+
+če se miner po 1 minuti ne zažene ga zaženi z:
+./ccminer/start.sh
+
+______________________________________________________________________________
+KONEC
+
+
+
+------------- to je del avtomatike
 
 __nastavi auto start in barve:
 apt install -y nano screen && nano ~/.bashrc
@@ -93,23 +121,6 @@ wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/install.sh && c
 
 __v JSON menjaj ime delavca - se postavi avtomatsko
 
-__pojdi v SETTINGS 
-__pod APPS -> Termux označi "Appear on top" !!!!!!!!
-__S10 pod "Notification/Advanced Settings" označi "App icon badges" "Battery percentage" !!!
-__J7 pod ...  "Custom restr." odznači "Hide notif. dots on app icons"
-
-__potregni dol ekran in vklopi: "Acquire Wakelock"  ->  (wake lock held)
-
-__na "Stop optimizing battery ... "  -> Alow
-
-__zaženi Termux.BOOT
-
-__RESTART PHONE
-
-__zaženeš UBUNTU, če se ni sam ga z:
-./start.sh
-
-______________________________________________________________________________
 
 __to get temps in userland, if its a phone, ssh into it and run these commands 
 
