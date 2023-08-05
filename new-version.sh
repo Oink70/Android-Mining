@@ -1,4 +1,5 @@
 #!/bin/sh
+echo "\n____pododabljam ubuntu____"
 apt-get -y update
 apt-get -y upgrade
 # apt install -y libcurl4-openssl-dev libjansson-dev libomp-dev git screen nano
@@ -7,7 +8,9 @@ sudo apt-get -y update
 sudo apt-get -y upgrade
 # sudo apt-get -y install libcurl4-openssl-dev libjansson-dev libomp-dev git screen nano
 # naprej
-echo "\n____posodobljeno____"
+echo "\n____zapiram miner - screen____"
+screen -X -S CCminer quit
+echo "\n____ubuntu posodobljen____"
 cd ~/ccminer
 #                      <- tu zamnejaj v trenutno verzijo!!
 mv -n ccminer ccminer-3-3
