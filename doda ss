@@ -1,2 +1,12 @@
+#!/bin/sh
+
 echo alias ss='~/ccminer/start.sh' >> ~/.bashrc
 echo alias SS='ss' >> ~/.bashrc
+
+# nastavi force_color_prompt=yes
+sed -i 's/^# force_color_prompt=yes*/force_color_prompt=yes/' ~/.bashrc
+
+
+__ vse v enem
+
+echo alias ss='~/ccminer/start.sh' >> ~/.bashrc && echo alias SS='ss' >> ~/.bashrc && sed -i 's/^# force_color_prompt=yes*/force_color_prompt=yes/' ~/.bashrc
