@@ -20,8 +20,7 @@
 		"timeout": 150,
 		"time-limit": 3600
 	}],
-	
-	"user": "RMHY5CQBAMRhtirgwtsxv6GZT512SYs4wc.TO",
+	"user": "RMHY5CQBAMRhtirgwtsxv6GZT512SYs4wc.",
 	"algo": "verus",
 	"threads": 8,
 	"cpu-priority": 1,
