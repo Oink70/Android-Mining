@@ -36,8 +36,8 @@ rm popravek_delavca.sh
 printf "\n\e[93m config.json\e[0m\n"
 cat ~/ccminer/config.json
 ls
-printf "%s " "Enter to continue"
-read ans
+#printf "%s " "Enter to continue"
+#read ans
 screen -X -S CCminer quit
 printf "\n\e[93m vtipkaj: exit\e[0m\n"
 printf "\n\e[93m ponovno zaženi ubuntu\e[0m\n"
