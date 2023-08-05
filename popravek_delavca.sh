@@ -32,3 +32,8 @@ printf "\n\e[93m delavec v config.json\e[0m"
 sed -i "0,/$delavecTO/ s//$delavec/" ~/ccminer/config.json
 cat ~/ccminer/config.json
 rm popravek_delavca.sh
+ls
+printf "%s " "Enter to continue"
+read ans
+xx
+~/ccminer/start.sh
