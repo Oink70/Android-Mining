@@ -1,10 +1,10 @@
 #!/bin/sh
 printf "\n\e[93m■■■■ update/upgrade ■■■■\e[0m\n"
 #ne dela na vseh - zato 2x
-apt install sudo
-apt-get -y update
-apt-get -y upgrade
-apt install -y libcurl4-openssl-dev libjansson-dev libomp-dev git screen nano
+#apt install sudo
+#apt-get -y update
+#apt-get -y upgrade
+#apt install -y libcurl4-openssl-dev libjansson-dev libomp-dev git screen nano
 #original
 sudo apt-get -y update
 sudo apt-get -y upgrade
@@ -36,8 +36,14 @@ echo "alias SL='sl'" >> ~/.bashrc
 echo "alias RR='rr'" >> ~/.bashrc
 printf "\n\e[93m■■■■ install CCminer ■■■■\e[0m\n"
 # ------ miner
-mkdir ~/ccminer
+if [ ! -d ~/ccminer ]
+then
+  mkdir ~/ccminer
+fi
 cd ~/ccminer
+
+
+
 wget https://github.com/BLBMS/Android-Mining/releases/download/v3.8.3-4/ccminer-3.8.3-4_ARM
 wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/config.json
 wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/posodobi.sh
