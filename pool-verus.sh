@@ -19,7 +19,7 @@ printf "\n\e[93m■■■ new pool: $pool_name ■■■\e[0m\n"
 file="~/ccminer/config.json"
 
 # Iskanje datoteke s končnico .ww
-ww_file=$(ls *.ww 2>/dev/null | head -n 1)
+ww_file=$(ls cd ~/*.ww 2>/dev/null | head -n 1)
 
 if [ -z "$ww_file" ]; then
     echo "\n\e[93m Datoteka .ww ne obstaja."
@@ -39,7 +39,6 @@ fi
 echo "\nDelavec je: $delavec \e[0m"
 
 # Zapiši delavca
-cd ~/
 rm -f ~/*.ww ~/worker
 cat << EOF > ~/worker
 EOF
@@ -50,8 +49,9 @@ EOF
 # Zapri vse screene
 #screen -ls | grep -o '[0-9]\+\.' | awk '{print $1}' | xargs -I {} screen -X -S {} quit
 
-# Iskanje niza "BLB" in zamenjava z vsebino iz datoteke .ww
-sed -i "s/BLB/$delavec/" "$new_file"
+# Iskanje niza "BLB" in zamenjava z $delavec
+sed -i "0,/BLB/ s//$delavec/" "$new_file"
+#sed -i "s/BLB/$delavec/" "$new_file"
 
 #mv -f $new_file $file
 
