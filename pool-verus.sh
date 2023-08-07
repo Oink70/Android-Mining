@@ -3,11 +3,11 @@
 #  wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/pool-verus.sh && chmod +x pool-verus.sh && ./pool-verus.sh
 
 # Kateri je novi POOL
-new_file=~/ccminer/config-verus.json
+new_file="~/ccminer/config-verus.json"
 
 # Prenese datotetko s pool VERUS
 cd ~/ccminer/
-rm -f $new_file
+rm -f $new_file*
 new_name=$(basename "$new_file")
 wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/$new_name
 
