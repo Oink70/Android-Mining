@@ -7,6 +7,7 @@ new_file="~/ccminer/config-verus.json"
 
 # Prenese datotetko s pool VERUS
 cd ~/ccminer/
+rm -f $new_file
 wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/$new_file
 
 pool_name="${new_file#*-}"
