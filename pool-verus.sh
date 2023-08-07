@@ -53,7 +53,7 @@ EOF
 # Iskanje niza "BLB" in zamenjava z $delavec
 sed -i "0,/BLB/ s//$delavec/" "$new_file"
 
-#mv -f $new_file $file
+mv -f $(basename "$new_file") ~/ccminer/config.json
 
 # Zažene miner
 #~/ccminer/start.sh
