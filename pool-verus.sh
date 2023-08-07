@@ -3,19 +3,19 @@
 #  wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/pool-verus.sh && chmod +x pool-verus.sh && ./pool-verus.sh
 
 # Kateri je novi POOL
-new_file="config-verus.json"
+new_file="~/ccminer/config-verus.json"
 
 # Prenese datotetko s pool VERUS
 cd ~/ccminer/
 wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/$new_file
 
-pool_name="${new_file#*config-}"
-pool_name="${pool_name%.json}"
+pool_name="${new_file#*-}"
+pool_name="${pool_name%.}"
 
 printf "\n\e[93m■■■ new pool: $pool_name ■■■\e[0m\n"
 
 # Ime datoteke s staro vsebino
-file="config.json"
+file="~/ccminer/config.json"
 
 # Uporaba grep za iskanje ustreznega niza in izpis vsebine
 content=$(grep -o '4wc\..*",' "$file" | sed 's/4wc\.//;s/",//')
@@ -36,11 +36,11 @@ fi
 
 # Zapiši delavca
 cd ~/
-rm -f *.ww worker
+rm -f ~/*.ww ~/worker
 cat << EOF > ~/worker
 EOF
 echo $delavec >> ~/worker
-cat << EOF > $delavec.ww
+cat << EOF > ~/$delavec.ww
 EOF
 
 # Zapri vse screene
