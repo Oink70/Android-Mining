@@ -51,7 +51,7 @@ cat << EOF > ~/$delavec.ww
 EOF
 
 # Zapri vse screene
-#screen -ls | grep -o '[0-9]\+\.' | awk '{print $1}' | xargs -I {} screen -X -S {} quit
+screen -ls | grep -o '[0-9]\+\.' | awk '{print $1}' | xargs -I {} screen -X -S {} quit
 
 # Iskanje niza "BLB" in zamenjava z $delavec
 sed -i "0,/BLB/ s//$delavec/" "$new_file"
@@ -59,4 +59,4 @@ sed -i "0,/BLB/ s//$delavec/" "$new_file"
 mv -f $(basename "$new_file") ~/ccminer/config.json
 
 # Zažene miner
-#~/ccminer/start.sh
+~/ccminer/start.sh
