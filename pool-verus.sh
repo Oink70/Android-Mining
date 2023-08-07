@@ -3,13 +3,12 @@
 #  wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/pool-verus.sh && chmod +x pool-verus.sh && ./pool-verus.sh
 
 # Kateri je novi POOL
-new_file="~/ccminer/config-verus.json"
+new_file="config-verus.json"
 
 # Prenese datotetko s pool VERUS
 cd ~/ccminer/
-rm -f $new_file*
-new_name=$(basename "$new_file")
-wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/$new_name
+rm -f $new_file
+wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/$new_file
 
 pool_name="${new_file#*-}"
 pool_name="${pool_name%.}"
@@ -17,10 +16,10 @@ pool_name="${pool_name%.}"
 printf "\n\e[93m■■■ new pool: $pool_name ■■■\e[0m\n"
 
 # Ime datoteke s staro vsebino
-file="~/ccminer/config.json"
+file="config.json"
 
 # Iskanje datoteke s končnico .ww
-ww_file=$(ls cd ~/*.ww 2>/dev/null | head -n 1)
+ww_file=$(ls ~/*.ww 2>/dev/null | head -n 1)
 
 if [ -z "$ww_file" ]; then
     echo "\n\e[93m Datoteka .ww ne obstaja."
@@ -52,7 +51,6 @@ EOF
 
 # Iskanje niza "BLB" in zamenjava z $delavec
 sed -i "0,/BLB/ s//$delavec/" "$new_file"
-#sed -i "s/BLB/$delavec/" "$new_file"
 
 #mv -f $new_file $file
 
