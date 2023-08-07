@@ -1,10 +1,10 @@
 #!/bin/sh
 printf "\n\e[93m■■■■ update/upgrade ■■■■\e[0m\n"
 #ne dela na vseh - zato 2x
-#apt install sudo
-#apt-get -y update
-#apt-get -y upgrade
-#apt install -y libcurl4-openssl-dev libjansson-dev libomp-dev git screen nano
+apt install sudo
+apt-get -y update
+apt-get -y upgrade
+apt install -y libcurl4-openssl-dev libjansson-dev libomp-dev git screen nano
 #original
 sudo apt-get -y update
 sudo apt-get -y upgrade
