@@ -21,12 +21,14 @@ file="config.json"
 
 # Iskanje datoteke s končnico .ww
 ww_file=$(ls ~/*.ww 2>/dev/null | head -n 1)
+printf "\n\e[93m■■■ .ww: $ww_file ■■■\e[0m\n"
 
 if [ -z "$ww_file" ]; then
     echo "\n\e[93m Datoteka .ww ne obstaja."
    
     # Uporaba grep za iskanje ustreznega niza in izpis vsebine
     content=$(grep -o '4wc\..*",' "$file" | sed 's/4wc\.//;s/",//')
+    printf "\n\e[93m■■■ content: $content ■■■\e[0m\n"
 
     if [ "$content" = "BLB" ] || [ -z "$content" ]; then
         printf "\n\e[93m Obstoječ delavec ne obstaja."
