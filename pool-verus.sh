@@ -35,9 +35,9 @@ if [ -z "$ww_file" ]; then
         printf "\n\e[93m Obstoječ delavec ne obstaja."
         printf "\nIme delavca: "
         read delavec
-    else
-        delavec=$(cat "$ww_file")
     fi
+else
+    delavec=$(cat "$ww_file")
 fi
 
 echo "\nDelavec je: $delavec \e[0m"
