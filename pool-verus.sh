@@ -18,22 +18,25 @@ printf "\n\e[93m■■■ new pool: $pool_name ■■■\e[0m\n"
 # Ime datoteke s staro vsebino
 file="~/ccminer/config.json"
 
-# Uporaba grep za iskanje ustreznega niza in izpis vsebine
-content=$(grep -o '4wc\..*",' "$file" | sed 's/4wc\.//;s/",//')
+# Iskanje datoteke s končnico .ww
+ww_file=$(ls *.ww 2>/dev/null | head -n 1)
 
-# Preverimo, ali je vsebina enaka nizu "BLB"
-if [ "$content" = "BLB" ]; then
-    echo "Vsebina je enaka nizu BLB."
-    printf "\n\e[93m IME DELAVCA: \e[0m"
-    read delavec
-elif [ -z "$content" ]; then
-    echo "Napaka: Delavec ni bil najden v datoteki $file."
-    printf "\n\e[93m IME DELAVCA: \e[0m"
-    read delavec
-else
-    echo "Najden delavec je: $content"
-    delavec=$content
+if [ -z "$ww_file" ]; then
+    echo "\n\e[93m Datoteka .ww ne obstaja."
+   
+    # Uporaba grep za iskanje ustreznega niza in izpis vsebine
+    content=$(grep -o '4wc\..*",' "$file" | sed 's/4wc\.//;s/",//')
+
+    if [ "$content" = "BLB" ] || [ -z "$content" ]; then
+        printf "\n\e[93m Obstoječ delavec ne obstaja."
+        printf "\nIme delavca: "
+        read delavec
+    else
+        delavec=$(cat "$ww_file")
+    fi
 fi
+
+echo "\nDelavec je: $delavec \e[0m"
 
 # Zapiši delavca
 cd ~/
