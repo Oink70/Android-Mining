@@ -11,8 +11,8 @@ rm -f pool-verus.sh
 rm -f $new_file
 wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/$new_file
 
-pool_name="${new_file#*-}"
-pool_name="${pool_name%.}"
+pool_name="${new_file#*config-}"
+pool_name="${pool_name%.json}"
 
 printf "\n\e[93m■■■ new pool: $pool_name ■■■\e[0m\n"
 
