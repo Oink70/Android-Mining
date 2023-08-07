@@ -29,11 +29,9 @@ __install UBUNTU in Termux
 
 pkg update -y && pkg install curl proot tar -y && curl https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu/ubuntu.sh | bash
 
-__Auto boot ubuntu
-nano ~/.termux/termux.properties
+__Auto boot ubuntu  (nano ~/.termux/termux.properties) __Zbriši # pred: # allow-external-apps = true
 
-__Zbriši # pred:
-# allow-external-apps = true
+sed -i 's/^# allow-external-apps = true*/allow-external-apps = true/' ~/.termux/termux.properties_copy
 
 mkdir -p ~/.termux/boot && nano ~/.termux/boot/start.sh
 
