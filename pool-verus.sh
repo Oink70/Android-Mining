@@ -64,4 +64,4 @@ mv -f $(basename "$new_file") ~/ccminer/config.json
 
 # Prikaže screen
 sleep 2
-#screen -r
+screen -r
