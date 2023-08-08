@@ -37,7 +37,7 @@ if [ -z "$ww_file" ]; then
         read delavec
     fi
 else
-    delavec="${ww_file#root/}"
+    delavec=$(basename "$ww_file")
     delavec="${delavec%.ww}"
 fi
 
