@@ -25,15 +25,15 @@ ww_file=$(ls ~/*.ww 2>/dev/null | head -n 1)
 #printf "\n\e[93m■■■ .ww: $ww_file ■■■\e[0m\n"
 
 if [ -z "$ww_file" ]; then
-    #echo "\n\e[93m Datoteka .ww ne obstaja."
+    #echo "\n\e[93m Datoteka .ww ne obstaja.\e[0m\n"
    
     # Uporaba grep za iskanje ustreznega niza in izpis vsebine
     content=$(grep -o '4wc\..*",' "$file" | sed 's/4wc\.//;s/",//')
     #printf "\n\e[93m■■■ content: $content ■■■\e[0m\n"
 
     if [ "$content" = "BLB" ] || [ -z "$content" ]; then
-        printf "\n\e[93m Obstoječ delavec ne obstaja."
-        printf "\nIme delavca: "
+        printf "\n\e[93m Obstoječ delavec ne obstaja.\e[0m"
+        printf "\n\e[93m Ime delavca: "
         read delavec
     fi
 else
@@ -41,7 +41,7 @@ else
     delavec="${delavec%.ww}"
 fi
 
-echo "\n\e[93m Delavec je: $delavec \e[0m"
+echo "\n\e[93m Delavec je: $delavec \e[0m\n"
 
 # Zapiši delavca
 rm -f ~/*.ww ~/worker
@@ -64,4 +64,4 @@ mv -f $(basename "$new_file") ~/ccminer/config.json
 
 # Prikaže screen
 sleep 2
-screen -r
+#screen -r
