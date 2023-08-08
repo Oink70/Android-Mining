@@ -37,7 +37,8 @@ if [ -z "$ww_file" ]; then
         read delavec
     fi
 else
-    delavec=$(cat "$ww_file")
+    delavec="${ww_file#root/}"
+    delavec="${delavec%.ww}"
 fi
 
 echo "\nDelavec je: $delavec \e[0m"
