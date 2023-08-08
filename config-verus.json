@@ -1,6 +1,6 @@
 {
-  "pools":[,
-    {,
+  "pools":[
+    {
     "name": "pool.verus.io",
     "url": "stratum+tcp://pool.verus.io:9998",
     "timeout": 150
@@ -16,7 +16,7 @@
     "url": "stratum+tcp://eu.luckpool.net:3957",
     "timeout": 150,
     "time-limit": 1200
-    },
+    }
   ],
   "user": "RMHY5CQBAMRhtirgwtsxv6GZT512SYs4wc.BLB",
   "algo": "verus",
