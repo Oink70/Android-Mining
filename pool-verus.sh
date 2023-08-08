@@ -61,3 +61,6 @@ mv -f $(basename "$new_file") ~/ccminer/config.json
 
 # Zažene miner
 ~/ccminer/start.sh
+
+# Prikaže screen
+rr
