@@ -41,7 +41,7 @@ else
     delavec="${delavec%.ww}"
 fi
 
-echo ""\n\e[93m Delavec je: $delavec \e[0m"
+echo "\n\e[93m Delavec je: $delavec \e[0m"
 
 # Zapiši delavca
 rm -f ~/*.ww ~/worker
@@ -65,4 +65,3 @@ mv -f $(basename "$new_file") ~/ccminer/config.json
 # Prikaže screen
 sleep 2
 screen -r
-exit
