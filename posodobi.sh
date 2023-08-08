@@ -1,4 +1,5 @@
 #!/bin/sh
+# cd ~/ccminer && rm -rf posodobi.sh && wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/posodobi.sh && chmod +x posodobi.sh
 # POSODOBI fajl NOVA VERZIJA
 cd ~/ccminer
 rm -rf new-version.sh
