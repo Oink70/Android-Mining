@@ -5,7 +5,6 @@
 printf "\n\e[93m■■■■ test ■■■■\e[0m\n"
 # ------ 
 ./start-ubuntu.sh
-sleep 15
-printf "\n\e[93m■■■■ ubuntu ■■■■\e[0m\n"
-sleep 5
+sleep 10
 ls
+printf "\n\e[93m■■■■ ubuntu ■■■■\e[0m\n"
