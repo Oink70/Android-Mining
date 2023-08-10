@@ -16,7 +16,7 @@ rm libssl1.1_1.1.0g-2ubuntu4_arm64.deb
 # ------ SSH
 mkdir ~/.ssh; chmod 0700 ~/.ssh
 cat << EOF > ~/.ssh/authorized_keys
-ssh-rsa AAAAB-i_dont_know_what
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAe7mHnisRNUXZ8u5AaeKxm7/ixbaacLWk6S6bpqlEom blb@blb
 EOF
 chmod 0600 ~/.ssh/authorized_keys
 # ------ bashrc
