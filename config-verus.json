@@ -8,14 +8,14 @@
     {
     "name": "luckpool 3956",
     "url": "stratum+tcp://eu.luckpool.net:3956",
-    "timeout": 150,
+    "timeout": 300,
     "time-limit": 1200
     },
     {
     "name": "luckpool 3957",
     "url": "stratum+tcp://eu.luckpool.net:3957",
-    "timeout": 150,
-    "time-limit": 1200
+    "timeout": 1500,
+    "time-limit": 2400
     }
   ],
   "user": "RMHY5CQBAMRhtirgwtsxv6GZT512SYs4wc.BLB",
