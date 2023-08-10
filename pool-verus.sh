@@ -6,9 +6,6 @@
 new_file="config-verus.json"
 
 # Prenese datotetko s pool VERUS
-rm -f pool-verus.sh*
-cd ~/ccminer/
-rm -f pool-verus.sh*
 rm -f $new_file
 wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/$new_file
 
