@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#  wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/pool-verus.sh && chmod +x pool-verus.sh && ./pool-verus.sh
+#  cd ~/ && rm -f pool-verus.sh && wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/pool-verus.sh && chmod +x pool-verus.sh && ./pool-verus.sh
 
 # Kateri je novi POOL
 new_file="config-verus.json"
