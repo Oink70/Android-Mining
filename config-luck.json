@@ -1,6 +1,6 @@
 {
-  "pools":[,
-    {,
+  "pools":[
+    {
     "name": "luckpool 3956",
     "url": "stratum+tcp://eu.luckpool.net:3956",
     "timeout": 150
@@ -8,19 +8,19 @@
     {
     "name": "luckpool 3957",
     "url": "stratum+tcp://eu.luckpool.net:3957",
-    "timeout": 150
+    "timeout": 300
     },
     {
     "name": "luckpool NA",
     "url": "stratum+tcp://na.luckpool.net:3956",
-    "timeout": 150
+    "timeout": 600
     },
     {
     "name": "pool.verus.io",
     "url": "stratum+tcp://pool.verus.io:9998",
-    "timeout": 150,
-    "time-limit": 1200
-    },
+    "timeout": 900,
+    "time-limit": 2400
+    }
   ],
   "user": "RMHY5CQBAMRhtirgwtsxv6GZT512SYs4wc.BLB",
   "algo": "verus",
