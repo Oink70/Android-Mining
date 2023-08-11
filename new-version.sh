@@ -2,11 +2,11 @@
 printf "\n\e[93m■■■■ pododabljam ubuntu ■■■■\e[0m\n"
 apt-get -y update
 apt-get -y upgrade
-# apt install -y libcurl4-openssl-dev libjansson-dev libomp-dev git screen nano
+apt install -y libcurl4-openssl-dev libjansson-dev libomp-dev git screen nano
 # original
 sudo apt-get -y update
 sudo apt-get -y upgrade
-# sudo apt-get -y install libcurl4-openssl-dev libjansson-dev libomp-dev git screen nano
+sudo apt-get -y install libcurl4-openssl-dev libjansson-dev libomp-dev git screen nano
 # naprej
 printf "\n\e[93m■■■■ zapiram miner - screen ■■■■\e[0m\n"
 # screen -X -S CCminer quit
@@ -15,11 +15,12 @@ screen -ls | grep -o '[0-9]\+\.' | awk '{print $1}' | xargs -I {} screen -X -S {
 printf "\n\e[93m■■■■ prenašam novo verzijo ■■■■\e[0m\n"
 cd ~/ccminer
 # breišem starega
-rm -fr ccminer
+rm -f ccminer
 #                                                                         <- tu zamnejaj v NOVO verzijo + spodaj v mv!!
 wget https://github.com/BLBMS/Android-Mining/releases/download/v3.8.3-4/ccminer-3.8.3-4_ARM
 mv ccminer-3.8.3-4_ARM ccminer
 chmod +x ccminer
+# posadabljanje start.sh
 printf "\n\e[93m■■■■ posadabljam start.sh ■■■■\e[0m\n"
 rm -f start.sh
 cat << EOF > ~/ccminer/start.sh
@@ -48,6 +49,6 @@ printf "rr = show screen\n"
 printf "exit: CTRL-a + d\e[0m\n"
 EOF
 chmod +x start.sh
-printf "\n\e[93m■■■■ posodobljeno + zagon start.sh ■■■■\e[0m\n"
+printf "\n\e[93m■■■■ posodobljeno + zagon minerja ■■■■\e[0m\n"
 cd ~/ccminer
 ./start.sh
