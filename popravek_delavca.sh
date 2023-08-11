@@ -1,13 +1,13 @@
 #!/bin/sh
 
-#  wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/popravek_delavca.sh && chmod +x popravek_delavca.sh && ./popravek_delavca.sh
+#  cd ~/ && rm -f ./popravek_delavca.sh && wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/popravek_delavca.sh && chmod +x popravek_delavca.sh && ./popravek_delavca.sh
 
-echo "alias ss='~/ccminer/start.sh'" >> ~/.bashrc
-echo "alias SS='ss'" >> ~/.bashrc
+#echo "alias ss='~/ccminer/start.sh'" >> ~/.bashrc
+#echo "alias SS='ss'" >> ~/.bashrc
 
 # nastavi force_color_prompt=yes
-sed -i 's/^# force_color_prompt=yes*/force_color_prompt=yes/' ~/.bashrc
-sed -i 's/^#force_color_prompt=yes*/force_color_prompt=yes/' ~/.bashrc
+#sed -i 's/^# force_color_prompt=yes*/force_color_prompt=yes/' ~/.bashrc
+#sed -i 's/^#force_color_prompt=yes*/force_color_prompt=yes/' ~/.bashrc
 
 __ vse v enem
 
