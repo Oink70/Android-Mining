@@ -7,7 +7,7 @@ new_file="config-luck.json"
 
 # Prenese datotetko s pool VERUS
 rm -f $new_file
-wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/$new_file
+wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/$new_file
 
 pool_name="${new_file#*config-}"
 pool_name="${pool_name%.json}"
