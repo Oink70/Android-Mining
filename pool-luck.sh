@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#  cd ~/ && rm -f pool-luck.sh && wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/pool-luck.sh && chmod +x pool-luck.sh && ./pool-luck.sh
+#  cd ~/ && rm -f pool-luck.sh && wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/pool-luck.sh && chmod +x pool-luck.sh && ./pool-luck.sh
 
 # Kateri je novi POOL
 new_file="config-luck.json"
