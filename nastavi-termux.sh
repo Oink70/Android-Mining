@@ -1,4 +1,7 @@
 #!/bin/sh
+
+# cd ~/ && rm -f nastavi-termux.sh && wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/nastavi-termux.sh && chmod +x nastavi-termux.sh && ./nastavi-termux.sh
+
 printf "\n\e[93m■■■ nastavljam v TERMUX ■■■\e[0m\n"
 
 # ssh -t -i ~/.ssh/id_xxx blb@192.168.xxx.xxx -p xx22 "bash -ic './xxxter.sh'"
