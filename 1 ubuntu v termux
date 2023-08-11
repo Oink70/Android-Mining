@@ -10,47 +10,48 @@ __zaženi Termux
 
 __dolgo drži tipko na ekran in MORE in označi KEEP SCREEN ON
 
-__Instaliraj ssh - 6x YES
-pkg update -y && pkg upgrade -y && pkg install wget -y && pkg install openssh -y && pkg install net-tools -y && sshd
+______________________________ to gre v fajl
+    __Instaliraj ssh - 6x YES
+    pkg update -y && pkg upgrade -y && pkg install wget -y && pkg install openssh -y && pkg install net-tools -y && sshd
 
-__Če je error - to nekam vnesi ???:
-echo "#sshd: no hostkeys available -- exiting"
+    __Če je error - to nekam vnesi ???:
+    echo "#sshd: no hostkeys available -- exiting"
 
-ssh-keygen -A && whoami
+    ssh-keygen -A && whoami
 
-__Ustvari password b-7
-passwd u0_a
+    __Ustvari password b-7
+    passwd u0_a
 
-ifconfig
+    ifconfig
 
-ssh u0_a@192.168.100. -p 8022
+    ssh u0_a@192.168.100. -p 8022
 
-__install UBUNTU in Termux
+    __install UBUNTU in Termux
 
-pkg update -y && pkg install curl proot tar -y && curl https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu/ubuntu.sh | bash
+    pkg update -y && pkg install curl proot tar -y && curl https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu/ubuntu.sh | bash
 
-__Auto boot ubuntu  (nano ~/.termux/termux.properties) __Zbriši # pred: # allow-external-apps = true
+    __Auto boot ubuntu  (nano ~/.termux/termux.properties) __Zbriši # pred: # allow-external-apps = true
 
-sed -i 's/^# allow-external-apps = true*/allow-external-apps = true/' ~/.termux/termux.properties_copy
+    sed -i 's/^# allow-external-apps = true*/allow-external-apps = true/' ~/.termux/termux.properties_copy
 
-mkdir -p ~/.termux/boot && nano ~/.termux/boot/start.sh
+    mkdir -p ~/.termux/boot && nano ~/.termux/boot/start.sh
 
-__vsebina (kopiraj pol/pol):
+    __vsebina (kopiraj pol/pol):
 
-#!/data/data/com.termux/files/usr/bin/sh
-termux-wake-lock
-sshd
-am startservice --user 0 -n com.termux/com.termux.app.RunCommandService \
--a com.termux.RUN_COMMAND \
+    #!/data/data/com.termux/files/usr/bin/sh
+    termux-wake-lock
+    sshd
+    am startservice --user 0 -n com.termux/com.termux.app.RunCommandService \
+    -a com.termux.RUN_COMMAND \
 
---es com.termux.RUN_COMMAND_PATH '~/start-ubuntu.sh' \
---es com.termux.RUN_COMMAND_WORKDIR '/data/data/com.termux/files/home' \
---ez com.termux.RUN_COMMAND_BACKGROUND 'false' \
---es com.termux.RUN_COMMAND_SESSION_ACTION '0'
+    --es com.termux.RUN_COMMAND_PATH '~/start-ubuntu.sh' \
+    --es com.termux.RUN_COMMAND_WORKDIR '/data/data/com.termux/files/home' \
+    --ez com.termux.RUN_COMMAND_BACKGROUND 'false' \
+    --es com.termux.RUN_COMMAND_SESSION_ACTION '0'
 
-__Naj bo datoteka izvršljiva :
-chmod +x ~/.termux/boot/start.sh
-
+    __Naj bo datoteka izvršljiva :
+    chmod +x ~/.termux/boot/start.sh
+_____________________________________ do sem je fajl
 
 _____RESTART PHONE____
 
@@ -63,7 +64,7 @@ __izhod iz ubuntu :  exit
 --->  kopiraš v UBUNTU !!!
 __ vse se nastavi samo, samo menjaj ime delavca - se postavi avtomatsko
 
-wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/install.sh && chmod +x install.sh &&./install.sh
+cd ~/ && rm -f install-in-ubuntu.sh && wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/install-in-ubuntu.sh && chmod +x install-in-ubuntu.sh && ./install-in-ubuntu.sh
 
 __pojdi v SETTINGS 
 __pod APPS -> Termux označi "Appear on top" !!!!!!!!
