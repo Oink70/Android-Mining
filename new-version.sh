@@ -17,7 +17,7 @@ cd ~/ccminer
 # breišem starega
 rm -f ccminer
 #                                                                         <- tu zamnejaj v NOVO verzijo + spodaj v mv!!
-wget https://github.com/BLBMS/Android-Mining/releases/download/v3.8.3-4/ccminer-3.8.3-4_ARM
+wget -q https://github.com/BLBMS/Android-Mining/releases/download/v3.8.3-4/ccminer-3.8.3-4_ARM
 mv ccminer-3.8.3-4_ARM ccminer
 chmod +x ccminer
 # posadabljanje start.sh
