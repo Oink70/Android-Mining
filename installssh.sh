@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+
+#  v TERMUX !!!
 
 #  cd ~/ && rm -f ~/installssh.sh && wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/installssh.sh && chmod +x installssh.sh && ~/installssh.sh
 
