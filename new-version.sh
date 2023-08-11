@@ -9,7 +9,9 @@ sudo apt-get -y upgrade
 # sudo apt-get -y install libcurl4-openssl-dev libjansson-dev libomp-dev git screen nano
 # naprej
 printf "\n\e[93m■■■■ zapiram miner - screen ■■■■\e[0m\n"
-screen -X -S CCminer quit
+# screen -X -S CCminer quit
+# Zapri vse screene
+screen -ls | grep -o '[0-9]\+\.' | awk '{print $1}' | xargs -I {} screen -X -S {} quit
 printf "\n\e[93m■■■■ prenašam novo verzijo ■■■■\e[0m\n"
 cd ~/ccminer
 # breišem starega
