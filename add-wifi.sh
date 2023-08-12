@@ -1,6 +1,8 @@
 #!/bin/sh
 exit
 
+root phone !!!
+
 $$$$__UBUNTU - nej pravo
 sudo apt-get -y install network-manager
 
