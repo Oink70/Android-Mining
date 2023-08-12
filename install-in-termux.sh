@@ -17,12 +17,32 @@ ssh-keygen -A
 printf "\n\e[93m■■■■ 1 ■■■■\e[0m\n"
 #  whoami
 my_name=$(whoami)
-echo -e "\n\e[93m■■■■ my_name=" $my_name " ■■■■\e[0m\n"
+echo -e "\n\e[93m■■■■ who am i= $my_name ■■■■\e[0m\n"
 printf "\n\e[93m■■■■ 2 ■■■■\e[0m\n"
 #  Ustvari password b-7
 passwd $my_name
 printf "\n\e[93m■■■■ 3 ■■■■\e[0m\n"
-ifconfig
+
+# Izvedi ukaz ifconfig in shranimo izhod v spremenljivko output
+ifconfig_out=$(ifconfig)
+# Poišči vrstico z 'inet 192' za mrežno povezavo (wlan0)
+ip_line=$(echo "$ifconfig_out" | grep 'inet 192')
+# Uporabi awk za izluščenje zadnjega dela IP naslova (152)
+phone_ip=$(echo "$ip_line" | awk -F'.' '{print $4}')
+# Izpiši zadnji del IP naslova
+echo -e "\n\e[93m■■■■ IP= $phone_ip  ■■■■\e[0m\n"
+
+
+
+
+
+
+
+
+
+
+
+
 printf "\n\e[93m■■■■ 4 ■■■■\e[0m\n"
 
 
