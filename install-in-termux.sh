@@ -31,7 +31,7 @@ phone_ip=$(echo "$ip_line" | cut -d'.' -f4 | cut -c1-3)
 echo -e "\n\e[93m■■■■ IP= $phone_ip  ■■■■\e[0m\n"
 printf "\n\e[93m■■■■ 4 ■■■■\e[0m\n"
 
-echo ssh $my_namea@192.168.100.$phone_ip -p 8022
+echo ssh $my_name@192.168.100.$phone_ip -p 8022
 
 
 
