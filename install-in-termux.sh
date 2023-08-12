@@ -31,8 +31,7 @@ ip_line=$(echo "$ifconfig_out" | grep 'inet 192')
 #phone_ip=$(echo "$ip_line" | awk -F'.' '{print $4}')
 
 # Uporabi cut za izluščenje prvega dela zadnjega IP naslova (152)
-phone_ip=$(echo "$ip_line" | cut -d' ' -f2 | cut -d'.' -f4)
-
+phone_ip=$(echo "$ip_line" | cut -d'.' -f4 | cut -c1-3)
 
 
 # Izpiši zadnji del IP naslova
