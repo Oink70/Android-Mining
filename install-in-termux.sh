@@ -30,11 +30,9 @@ echo "IP=" $phone_ip
 # Nastavi SSH
 ssh $my_name@192.168.100.$phone_ip -p 8022
 printf "\n\e[93mnastavljam keys\e[0m\n"
-if [ ! -d ~/.ssh ]; then
-    mkdir ~/.ssh
-    chmod 0700 ~/.ssh
-fi
-rm -f ~/.ssh/authorized_keys
+rm -r ~/.ssh/
+mkdir ~/.ssh
+chmod 0700 ~/.ssh
 cat << EOF > ~/.ssh/authorized_keys
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAe7mHnisRNUXZ8u5AaeKxm7/ixbaacLWk6S6bpqlEom blb@blb
 EOF
