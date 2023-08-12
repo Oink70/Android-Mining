@@ -28,7 +28,13 @@ ifconfig_out=$(ifconfig)
 # Poišči vrstico z 'inet 192' za mrežno povezavo (wlan0)
 ip_line=$(echo "$ifconfig_out" | grep 'inet 192')
 # Uporabi awk za izluščenje zadnjega dela IP naslova (152)
-phone_ip=$(echo "$ip_line" | awk -F'.' '{print $4}')
+#phone_ip=$(echo "$ip_line" | awk -F'.' '{print $4}')
+
+# Uporabi cut za izluščenje prvega dela zadnjega IP naslova (152)
+phone_ip=$(echo "$ip_line" | cut -d' ' -f2 | cut -d'.' -f4)
+
+
+
 # Izpiši zadnji del IP naslova
 echo -e "\n\e[93m■■■■ IP= $phone_ip  ■■■■\e[0m\n"
 
