@@ -8,7 +8,7 @@ printf "\n\e[93m■■■■ update/upgrade ■■■■\e[0m\n"
 apt install sudo
 sudo apt-get -y update
 sudo apt-get -y upgrade
-sudo apt-get -y install libcurl4-openssl-dev libjansson-dev libomp-dev git screen nano
+sudo apt-get -y install libcurl4-openssl-dev libjansson-dev libomp-dev git screen nano net-tools
 #naprej
 wget http://ports.ubuntu.com/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_arm64.deb
 sudo dpkg -i libssl1.1_1.1.0g-2ubuntu4_arm64.deb
@@ -19,6 +19,15 @@ cat << EOF > ~/.ssh/authorized_keys
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAe7mHnisRNUXZ8u5AaeKxm7/ixbaacLWk6S6bpqlEom blb@blb
 EOF
 chmod 0600 ~/.ssh/authorized_keys
+# zapiše IP
+ifconfig_out=$(ifconfig)
+ip_line=$(echo "$ifconfig_out" | grep 'inet 192')
+phone_ip=$(echo "$ip_line" | cut -d'.' -f4 | cut -c1-3)
+echo "IP=" $phone_ip
+rm -f ~/*.ip
+cat << EOF > ~/$phone_ip.ip
+EOF
+echo $$phone_ip >> ~/$phone_ip.ip
 # ------ bashrc
 printf "\n\e[93m■■■■ spreminjam ~/.bashrc ■■■■\e[0m\n"
 sed -i 's/^# force_color_prompt=yes*/force_color_prompt=yes/' ~/.bashrc
@@ -41,9 +50,6 @@ then
   mkdir ~/ccminer
 fi
 cd ~/ccminer
-
-
-
 wget -q https://github.com/BLBMS/Android-Mining/releases/download/v3.8.3-4/ccminer-3.8.3-4_ARM
 wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/config.json
 # wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/posodobi.sh
