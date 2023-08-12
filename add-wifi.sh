@@ -37,9 +37,31 @@ ___ iwpriv: Ta ukaz omogoča upravljanje s posebnimi nastavitvami brezžičnih o
 
 ___ iw: To je novejši ukaz, ki združuje funkcionalnosti iwconfig in iwlist. Omogoča bolj napredno upravljanje in konfiguracijo brezžičnih vmesnikov.
 
+The program iw is not installed. Install it by executing:
+pkg install iw
+
+
 ___ iwgetid: Ta ukaz prikazuje SSID trenutno povezanega brezžičnega omrežja.
 
 ___ iwspy: Ta ukaz omogoča spremljanje in analizo kakovosti signala med brezžičnimi napravami.
 
 Pomembno je vedeti, da so se nekateri od teh ukazov v zadnjem času razvijali in nadomeščeni z novimi orodji za upravljanje brezžičnih omrežij, kot je iw. Za podrobnejše informacije o ukazih in njihovi uporabi lahko vedno preverite njihovo dokumentacijo z ukazi man <ime_ukaza> ali --help.
 
+
+
+
+
+
+getprop
+  ro.product.manufacturer]
+getprop ro.product.model
+  ro.boot.em.model
+  ro.hardware  
+  ro.product.bootimage.brand
+  ro.product.cpu.abilist64]
+  ro.boot.hardware
+  ro.bootimage.build.date
+  ro.bootimage.build.version.release
+  ro.soc.manufacturer
+  
+  
