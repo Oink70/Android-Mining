@@ -1,11 +1,12 @@
 #!/bin/bash
 
+#   pkg update -y && pkg upgrade -y && pkg install wget -y && pkg install openssh -y && pkg install net-tools -y
 #   cd ~/ && rm -f install-in-termux.sh && wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/install-in-termux.sh && chmod +x install-in-termux.sh && ./install-in-termux.sh
 
 printf "\n\e[93m■■■■ nastavitve v TERMUX ■■■■\e[0m\n"
-printf "\n\e[93mupdate TERMUX\e[0m\n"
+#printf "\n\e[93mupdate TERMUX\e[0m\n"
 # Instaliraj ssh - 6x YES
-pkg update -y && pkg upgrade -y && pkg install wget -y && pkg install openssh -y && pkg install net-tools -y
+#pkg update -y && pkg upgrade -y && pkg install wget -y && pkg install openssh -y && pkg install net-tools -y
 echo -e "\n\e[93mnastavljam SSH\e[0m\n"
 # nastavi SSH
 sshd
