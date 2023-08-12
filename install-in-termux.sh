@@ -12,7 +12,7 @@ sshd
 
 #  Če je error - to nekam vnesi ???:
 #  echo "#sshd: no hostkeys available -- exiting"
-
+: '
 ssh-keygen -A
 #  whoami
 my_name=$(whoami)
@@ -30,13 +30,19 @@ echo "IP=" $phone_ip
 # Nastavi SSH
 ssh $my_name@192.168.100.$phone_ip -p 8022
 printf "\n\e[93mnastavljam keys\e[0m\n"
+'
+
+cd ~/
 rm -r ~/.ssh/
 mkdir ~/.ssh
 chmod 0700 ~/.ssh
+cd ~/.ssh
+sleep 1
 cat << EOF > ~/.ssh/authorized_keys
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAe7mHnisRNUXZ8u5AaeKxm7/ixbaacLWk6S6bpqlEom blb@blb
 EOF
 chmod 0600 ~/.ssh/authorized_keys
+ls
 echo -e "\n\e[93mnastavljeno\e[0m\n"
 
 exit
