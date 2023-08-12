@@ -4,8 +4,9 @@
 
 printf "\n\e[93m■■■■ nastavitve v TERMUX ■■■■\e[0m\n"
 printf "\n\e[93m■■■■ update TERMUX ■■■■\e[0m\n"
+
 # Instaliraj ssh - 6x YES
-pkg update -y && pkg upgrade -y && pkg install wget -y && pkg install openssh -y && pkg install net-tools -y
+#pkg update -y && pkg upgrade -y && pkg install wget -y && pkg install openssh -y && pkg install net-tools -y
 
 sshd
 
@@ -16,7 +17,7 @@ ssh-keygen -A
 printf "\n\e[93m■■■■ 1 ■■■■\e[0m\n"
 #  whoami
 my_name=$(whoami)
-printf "\n\e[93m■■■■ my_name=" $my_name " ■■■■\e[0m\n"
+echo -e "\n\e[93m■■■■ my_name=" $my_name " ■■■■\e[0m\n"
 printf "\n\e[93m■■■■ 2 ■■■■\e[0m\n"
 #  Ustvari password b-7
 passwd $my_name
