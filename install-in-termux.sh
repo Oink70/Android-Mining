@@ -5,31 +5,24 @@
 printf "\n\e[93m■■■■ nastavitve v TERMUX ■■■■\e[0m\n"
 printf "\n\e[93m■■■■ update TERMUX ■■■■\e[0m\n"
 # Instaliraj ssh - 6x YES
-pkg update -y
-printf "\n\e[93m■■■■ 1111 ■■■■\e[0m\n"
-pkg upgrade -y
-printf "\n\e[93m■■■■ 2222 ■■■■\e[0m\n"
-pkg install wget -y
-printf "\n\e[93m■■■■ 3333 ■■■■\e[0m\n"
-pkg install openssh -y
-printf "\n\e[93m■■■■ 4444 ■■■■\e[0m\n"
-pkg install net-tools -y
-printf "\n\e[93m■■■■ 5555 ■■■■\e[0m\n"
+pkg update -y && pkg upgrade -y && pkg install wget -y && pkg install openssh -y && pkg install net-tools -y
+
 sshd
 
 #  Če je error - to nekam vnesi ???:
 #  echo "#sshd: no hostkeys available -- exiting"
 
 ssh-keygen -A
-
+printf "\n\e[93m■■■■ 1 ■■■■\e[0m\n"
 #  whoami
 my_name=$(whoami)
-
+printf "\n\e[93m■■■■ my_name=" $my_name " ■■■■\e[0m\n"
+printf "\n\e[93m■■■■ 2 ■■■■\e[0m\n"
 #  Ustvari password b-7
 passwd $my_name
-
+printf "\n\e[93m■■■■ 3 ■■■■\e[0m\n"
 ifconfig
-
+printf "\n\e[93m■■■■ 4 ■■■■\e[0m\n"
 
 
 
