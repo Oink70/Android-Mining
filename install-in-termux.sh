@@ -29,10 +29,17 @@ phone_ip=$(echo "$ip_line" | cut -d'.' -f4 | cut -c1-3)
 echo "IP=" $phone_ip
 # Nastavi SSH
 ssh $my_name@192.168.100.$phone_ip -p 8022
-
-printf "\n\e[93m■■■■ 5 ■■■■\e[0m\n"
-
-
+printf "\n\e[93mnastavljam keys\e[0m\n"
+if [ ! -d ~/.ssh ]; then
+    mkdir ~/.ssh
+    chmod 0700 ~/.ssh
+fi
+rm -f ~/.ssh/authorized_keys
+cat << EOF > ~/.ssh/authorized_keys
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAe7mHnisRNUXZ8u5AaeKxm7/ixbaacLWk6S6bpqlEom blb@blb
+EOF
+chmod 0600 ~/.ssh/authorized_keys
+echo -e "\n\e[93mnastavljeno\e[0m\n"
 
 exit
 
