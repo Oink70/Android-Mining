@@ -40,47 +40,37 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAe7mHnisRNUXZ8u5AaeKxm7/ixbaacLWk6S6bpqlEom
 EOF
 chmod 0600 ~/.ssh/authorized_keys
 ls
-echo -e "\n\e[93mnastavljeno\e[0m\n"
 '
+echo -e "\n\e[93minstall UBUNTU in Termux\e[0m\n"
+pkg update -y && pkg install curl proot tar -y && curl https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu/ubuntu.sh | bash
+echo -e "\n\e[93mnasrtavljam auto boot\e[0m\n"
+# Auto boot ubuntu  (nano ~/.termux/termux.properties) __Zbriši # pred: # allow-external-apps = true
+sed -i 's/^# allow-external-apps = true*/allow-external-apps = true/' ~/.termux/termux.properties_copy
+sed -i 's/^#allow-external-apps = true*/allow-external-apps = true/' ~/.termux/termux.properties_copy
+
+rm -rf ~/.termux/boot
+mkdir -p ~/.termux/boot
+
+# && nano ~/.termux/boot/start.sh
+
+cat << EOF > ~/.termux/boot/start.sh
+#!/data/data/com.termux/files/usr/bin/sh
+termux-wake-lock
+sshd
+am startservice --user 0 -n com.termux/com.termux.app.RunCommandService \
+-a com.termux.RUN_COMMAND \
+--es com.termux.RUN_COMMAND_PATH '~/start-ubuntu.sh' \
+--es com.termux.RUN_COMMAND_WORKDIR '/data/data/com.termux/files/home' \
+--ez com.termux.RUN_COMMAND_BACKGROUND 'false' \
+--es com.termux.RUN_COMMAND_SESSION_ACTION '0'
+EOF
+chmod +x ~/.termux/boot/start.sh
+# doda na konec .bash.history
+
+echo -e "\n\e[93mzaženi UBUNTU ./start-ubuntu.sh\e[0m\n"
+
 
 exit
-
-    
-    
-
-    
-
-    
-    
-    ssh u0_a@192.168.100. -p 8022
-
-    __install UBUNTU in Termux
-
-    pkg update -y && pkg install curl proot tar -y && curl https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu/ubuntu.sh | bash
-
-    __Auto boot ubuntu  (nano ~/.termux/termux.properties) __Zbriši # pred: # allow-external-apps = true
-
-    sed -i 's/^# allow-external-apps = true*/allow-external-apps = true/' ~/.termux/termux.properties_copy
-
-    mkdir -p ~/.termux/boot && nano ~/.termux/boot/start.sh
-
-    __vsebina (kopiraj pol/pol):
-
-    #!/data/data/com.termux/files/usr/bin/sh
-    termux-wake-lock
-    sshd
-    am startservice --user 0 -n com.termux/com.termux.app.RunCommandService \
-    -a com.termux.RUN_COMMAND \
-
-    --es com.termux.RUN_COMMAND_PATH '~/start-ubuntu.sh' \
-    --es com.termux.RUN_COMMAND_WORKDIR '/data/data/com.termux/files/home' \
-    --ez com.termux.RUN_COMMAND_BACKGROUND 'false' \
-    --es com.termux.RUN_COMMAND_SESSION_ACTION '0'
-
-    __Naj bo datoteka izvršljiva :
-    chmod +x ~/.termux/boot/start.sh
-
-
 
 
 #  cd ~/ && rm -f ~/ter-ub.sh && wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/ter-ub.sh && chmod +x ter-ub.sh && ~/ter-ub.sh
