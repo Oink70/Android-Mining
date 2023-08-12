@@ -40,13 +40,13 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAe7mHnisRNUXZ8u5AaeKxm7/ixbaacLWk6S6bpqlEom
 EOF
 chmod 0600 ~/.ssh/authorized_keys
 ls
-'
 echo -e "\n\e[93minstall UBUNTU in Termux\e[0m\n"
 pkg update -y && pkg install curl proot tar -y && curl https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu/ubuntu.sh | bash
+'
 echo -e "\n\e[93mnasrtavljam auto boot\e[0m\n"
 # Auto boot ubuntu  (nano ~/.termux/termux.properties) __Zbriši # pred: # allow-external-apps = true
-sed -i 's/^# allow-external-apps = true*/allow-external-apps = true/' ~/.termux/termux.properties_copy
-sed -i 's/^#allow-external-apps = true*/allow-external-apps = true/' ~/.termux/termux.properties_copy
+sed -i 's/^# allow-external-apps = true*/allow-external-apps = true/' ~/.termux/termux.properties
+sed -i 's/^#allow-external-apps = true*/allow-external-apps = true/' ~/.termux/termux.properties
 
 rm -rf ~/.termux/boot
 mkdir -p ~/.termux/boot
@@ -66,21 +66,6 @@ am startservice --user 0 -n com.termux/com.termux.app.RunCommandService \
 EOF
 chmod +x ~/.termux/boot/start.sh
 # doda na konec .bash.history
-
-echo -e "\n\e[93mzaženi UBUNTU ./start-ubuntu.sh\e[0m\n"
-
-
-exit
-
-
-#  cd ~/ && rm -f ~/ter-ub.sh && wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/ter-ub.sh && chmod +x ter-ub.sh && ~/ter-ub.sh
-
-#printf "\n\e[93m■■■■ test ■■■■\e[0m\n"
-# ------ 
-#./start-ubuntu.sh
-#sleep 12
-
-#!/bin/sh
-#ls
-#printf "\n\e[93m■■■■ ubuntu ■■■■\e[0m\n"
-#sl
+echo "./start-ubuntu.sh" >> ~/.bash.history
+echo -e "\n\e[93mzaženi UBUNTU ./start-ubuntu.sh"
+echo -e "\nin restart telefona\e[0m\n"
