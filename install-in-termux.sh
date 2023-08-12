@@ -17,7 +17,7 @@ ssh-keygen -A
 #  whoami
 my_name=$(whoami)
 echo "whoami=" $my_name
-#  Ustvari password b-7
+#  Ustvari password
 passwd $my_name
 # Izvedi ukaz ifconfig in shranimo izhod v spremenljivko output
 ifconfig_out=$(ifconfig)
@@ -27,6 +27,7 @@ ip_line=$(echo "$ifconfig_out" | grep 'inet 192')
 phone_ip=$(echo "$ip_line" | cut -d'.' -f4 | cut -c1-3)
 # Izpiši zadnji del IP naslova
 echo "IP=" $phone_ip
+# Nastavi SSH
 ssh $my_name@192.168.100.$phone_ip -p 8022
 
 printf "\n\e[93m■■■■ 5 ■■■■\e[0m\n"
