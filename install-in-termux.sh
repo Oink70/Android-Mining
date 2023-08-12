@@ -3,16 +3,15 @@
 #   cd ~/ && rm -f install-in-termux.sh && wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/install-in-termux.sh && chmod +x install-in-termux.sh && ./install-in-termux.sh
 
 printf "\n\e[93m■■■■ nastavitve v TERMUX ■■■■\e[0m\n"
-printf "\n\e[93m■■■■ update TERMUX ■■■■\e[0m\n"
-
+printf "\n\e[93mupdate TERMUX\e[0m\n"
+: '
 # Instaliraj ssh - 6x YES
-###   pkg update -y && pkg upgrade -y && pkg install wget -y && pkg install openssh -y && pkg install net-tools -y
-
+pkg update -y && pkg upgrade -y && pkg install wget -y && pkg install openssh -y && pkg install net-tools -y
+echo -e "\n\e[93mnastavljam SSH\e[0m\n"
+# nastavi SSH
 sshd
-
 #  Če je error - to nekam vnesi ???:
 #  echo "#sshd: no hostkeys available -- exiting"
-: '
 ssh-keygen -A
 #  whoami
 my_name=$(whoami)
@@ -29,11 +28,9 @@ phone_ip=$(echo "$ip_line" | cut -d'.' -f4 | cut -c1-3)
 echo "IP=" $phone_ip
 # Nastavi SSH
 ssh $my_name@192.168.100.$phone_ip -p 8022
-printf "\n\e[93mnastavljam keys\e[0m\n"
-'
-
+echo -e "\n\e[93mnastavljam key\e[0m\n"
 cd ~/
-rm -r ~/.ssh/
+rm -rf ~/.ssh/
 mkdir ~/.ssh
 chmod 0700 ~/.ssh
 cd ~/.ssh
@@ -44,6 +41,7 @@ EOF
 chmod 0600 ~/.ssh/authorized_keys
 ls
 echo -e "\n\e[93mnastavljeno\e[0m\n"
+'
 
 exit
 
