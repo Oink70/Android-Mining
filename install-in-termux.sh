@@ -16,11 +16,9 @@ sshd
 ssh-keygen -A
 #  whoami
 my_name=$(whoami)
-echo -e "hoami=" $my_name
+echo "whoami=" $my_name
 #  Ustvari password b-7
-###   passwd $my_name
-printf "\n\e[93m■■■■ 3 ■■■■\e[0m\n"
-
+passwd $my_name
 # Izvedi ukaz ifconfig in shranimo izhod v spremenljivko output
 ifconfig_out=$(ifconfig)
 # Poišči vrstico z 'inet 192' za mrežno povezavo (wlan0)
@@ -28,19 +26,8 @@ ip_line=$(echo "$ifconfig_out" | grep 'inet 192')
 # Uporabi cut za izluščenje prvega dela zadnjega IP naslova (152)
 phone_ip=$(echo "$ip_line" | cut -d'.' -f4 | cut -c1-3)
 # Izpiši zadnji del IP naslova
-echo -e "\n\e[93m■■■■ IP= $phone_ip  ■■■■\e[0m\n"
-printf "\n\e[93m■■■■ 4 ■■■■\e[0m\n"
-
-echo ssh $my_name@192.168.100.$phone_ip -p 8022
-
-
-
-
-
-
-
-
-
+echo "IP=" $phone_ip
+ssh $my_name@192.168.100.$phone_ip -p 8022
 
 printf "\n\e[93m■■■■ 5 ■■■■\e[0m\n"
 
