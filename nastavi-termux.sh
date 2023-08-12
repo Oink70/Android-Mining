@@ -8,4 +8,3 @@ cd ~/ && rm -f pool-luck-ter.sh && wget -q https://raw.githubusercontent.com/BLB
 cd ~/ && rm -f nastavi-ubuntu-ter.sh && wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/nastavi-ubuntu-ter.sh && chmod +x nastavi-ubuntu-ter.sh
 cd ~/ && rm -f install-in-termux.sh && wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/install-in-termux.sh && chmod +x install-in-termux.sh
 printf "\n\e[93m■■■ nastavljeno v TERMUX ■■■\e[0m\n"
-./install-in-termux.sh
