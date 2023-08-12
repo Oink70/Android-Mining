@@ -16,7 +16,7 @@ sshd
 ssh-keygen -A
 #  whoami
 my_name=$(whoami)
-echo -e "\n\e[93m■■■■ who am i= $my_name ■■■■\e[0m\n"
+echo -e "hoami=" $my_name
 #  Ustvari password b-7
 ###   passwd $my_name
 printf "\n\e[93m■■■■ 3 ■■■■\e[0m\n"
