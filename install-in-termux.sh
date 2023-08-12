@@ -4,7 +4,6 @@
 
 printf "\n\e[93m■■■■ nastavitve v TERMUX ■■■■\e[0m\n"
 printf "\n\e[93mupdate TERMUX\e[0m\n"
-: '
 # Instaliraj ssh - 6x YES
 pkg update -y && pkg upgrade -y && pkg install wget -y && pkg install openssh -y && pkg install net-tools -y
 echo -e "\n\e[93mnastavljam SSH\e[0m\n"
@@ -18,14 +17,15 @@ my_name=$(whoami)
 echo "whoami=" $my_name
 #  Ustvari password
 passwd $my_name
-# Izvedi ukaz ifconfig in shranimo izhod v spremenljivko output
+# Nastavi IP
 ifconfig_out=$(ifconfig)
-# Poišči vrstico z 'inet 192' za mrežno povezavo (wlan0)
 ip_line=$(echo "$ifconfig_out" | grep 'inet 192')
-# Uporabi cut za izluščenje prvega dela zadnjega IP naslova (152)
 phone_ip=$(echo "$ip_line" | cut -d'.' -f4 | cut -c1-3)
-# Izpiši zadnji del IP naslova
 echo "IP=" $phone_ip
+rm -f ~/*.ip
+cat << EOF > ~/$phone_ip.ip
+EOF
+echo $$phone_ip >> ~/$phone_ip.ip
 # Nastavi SSH
 ssh $my_name@192.168.100.$phone_ip -p 8022
 echo -e "\n\e[93mnastavljam key\e[0m\n"
@@ -42,17 +42,13 @@ chmod 0600 ~/.ssh/authorized_keys
 ls
 echo -e "\n\e[93minstall UBUNTU in Termux\e[0m\n"
 pkg update -y && pkg install curl proot tar -y && curl https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu/ubuntu.sh | bash
-'
 echo -e "\n\e[93mnasrtavljam auto boot\e[0m\n"
 # Auto boot ubuntu  (nano ~/.termux/termux.properties) __Zbriši # pred: # allow-external-apps = true
 sed -i 's/^# allow-external-apps = true*/allow-external-apps = true/' ~/.termux/termux.properties
 sed -i 's/^#allow-external-apps = true*/allow-external-apps = true/' ~/.termux/termux.properties
-
 rm -rf ~/.termux/boot
 mkdir -p ~/.termux/boot
-
-# && nano ~/.termux/boot/start.sh
-
+# nastavi ~/.termux/boot/start.sh
 cat << EOF > ~/.termux/boot/start.sh
 #!/data/data/com.termux/files/usr/bin/sh
 termux-wake-lock
