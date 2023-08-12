@@ -16,6 +16,13 @@ $$$$__TERMUX
 
 $ pkg update
 
+pkg install android-tools
+adb devices
+
+
+
+
+
 ??? pkg install networkmanager 
 
 $ wpa_supplicant
@@ -50,18 +57,14 @@ Pomembno je vedeti, da so se nekateri od teh ukazov v zadnjem času razvijali in
 
 
 
+getprop ro.product.manufacturer
+getprop ro.boot.em.model
+getprop ro.boot.hardware
+getprop ro.soc.manufacturer
+getprop ro.product.bootimage.brand
+getprop ro.bootimage.build.version.release
+getprop ro.bootimage.build.date
+getprop ro.hardware
+getprop ro.product.cpu.abilist64
 
 
-getprop
-  ro.product.manufacturer]
-getprop ro.product.model
-  ro.boot.em.model
-  ro.hardware  
-  ro.product.bootimage.brand
-  ro.product.cpu.abilist64]
-  ro.boot.hardware
-  ro.bootimage.build.date
-  ro.bootimage.build.version.release
-  ro.soc.manufacturer
-  
-  
