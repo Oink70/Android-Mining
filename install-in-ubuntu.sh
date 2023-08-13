@@ -1,4 +1,7 @@
 #!/bin/sh
+
+#   cd ~/ && rm -f install-in-ubuntu.sh && wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/install-in-ubuntu.sh && chmod +x install-in-ubuntu.sh && ./install-in-ubuntu.sh
+
 printf "\n\e[93m■■■■ update/upgrade ■■■■\e[0m\n"
 #ne dela na vseh - zato 2x
 #apt-get -y update
