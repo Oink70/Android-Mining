@@ -68,7 +68,5 @@ Terminating the miner:
 ## Monitoring your miners (on a linux host)
 check [MONITORING](/monitoring/MONITORING.md).
 
-WARNING: The scripts installs my own public SSH key. You may want to remove that from your `~/.ssh/authorized_keys` file and replace it with your own for passwordless access.
-
 ### I accept no warranties or liabilities on this repo. It is supplied as a service.
 ### Use at your own risk!!!
