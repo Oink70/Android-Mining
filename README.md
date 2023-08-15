@@ -3,12 +3,13 @@ Quick installation of mining on Android Phones
 
 ## Github cloning and customizing
 1. clone this repo to your own github account.
-2. change the URL on line 24 of the README.md to reflect your own account.
-3. **Important**: change the SSH key on line 13 of `install.sh` to reflect your own SSH key.
-4. change lines 50 to reflect your own github link.
-5. adjust the `config.json` to your address and mining details.
-6. optional: change line 20 of your `config.json` to your own LAN IP range.
-7. optional: change line 21 of your `config.json` to the LAN IP your phone uses.
+2. change the URL on line 35 of the README.md to reflect your own account.
+3. replace `QR/install.png` with your own.
+4. **Important**: change the SSH key on line 13 of `install.sh` to reflect your own SSH key.
+5. change lines 50 to reflect your own github link.
+6. adjust the `config.json` to your address and mining details.
+7. optional: change line 20 of your `config.json` to your own LAN IP range.
+8. optional: change line 21 of your `config.json` to the LAN IP your phone uses.
 
 ## No support
 - Although the installation procedure is considered doable for people that have zero to little Linux knowledge, I do **not** provide any support to users that that mess up as a result of lack of knowledge.
