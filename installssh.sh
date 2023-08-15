@@ -2,11 +2,13 @@
 
 #  copy v TERMUX !!!  - 6x YES
 
-#->  pkg install wget -y && cd ~/ && rm -f ~/installssh.sh && wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/installssh.sh && chmod +x installssh.sh && ~/installssh.sh
+#->  pkg update -y && pkg upgrade -y && pkg install wget -y && pkg install openssh -y && pkg install net-tools -y
+
+#->  cd ~/ && rm -f ~/installssh.sh && wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/installssh.sh && chmod +x installssh.sh && ~/installssh.sh
 
 # se izvaja samo
-echo -e "\n\e[93mupdate TERMUX\e[0m\n"
-pkg update -y && pkg upgrade -y && pkg install openssh -y && pkg install net-tools -y && pkg install nano -y 
+#echo -e "\n\e[93mupdate TERMUX\e[0m\n"
+#pkg update -y && pkg upgrade -y && pkg install openssh -y && pkg install net-tools -y && pkg install nano -y 
 echo -e "\n\e[93mnastavljam SSH\e[0m\n"
 # nastavi SSH
 sshd
