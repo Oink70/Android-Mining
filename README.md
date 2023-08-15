@@ -4,7 +4,7 @@ Quick installation of mining on Android Phones
 ## Github cloning and customizing
 1. clone this repo to your own github account.
 2. change the URL on line 24 of the README.md to reflect your own account.
-3. **Important**:change the SSH key on line 13 of `install.sh` to reflect your own SSH key.
+3. **Important**: change the SSH key on line 13 of `install.sh` to reflect your own SSH key.
 4. change lines 50 to reflect your own github link.
 5. adjust the `config.json` to your address and mining details.
 6. optional: change line 20 of your `config.json` to your own LAN IP range.
