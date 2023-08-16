@@ -2,7 +2,21 @@ __ NOV TELEFON
 
 __kopiraj iz NAS v downloads
 __Instaliraj termux & termux boot
+______________________________ 
+TERMUX
 
+pkg update -y && pkg upgrade -y && pkg -y install wget openssh net-tools nano
+
+cd ~/ && rm -f ~/installssh.sh && wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/installssh.sh && chmod +x installssh.sh && ~/installssh.sh
+
+cd ~/ && rm -f nastavi-termux.sh && wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/nastavi-termux.sh && chmod +x nastavi-termux.sh && ./nastavi-termux.sh
+
+restart - UBUNTU
+
+cd ~/ && rm -f nastavi-ubuntu.sh && wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/nastavi-ubuntu.sh && chmod +x nastavi-ubuntu.sh && ./nastavi-ubuntu.sh
+
+restart
+______________________________ ne nücan _________________________________________________________________-
 https://f-droid.org/en/packages/com.termux/
 https://f-droid.org/en/packages/com.termux.boot/
 
