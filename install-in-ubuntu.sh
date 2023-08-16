@@ -17,11 +17,11 @@ wget http://ports.ubuntu.com/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_arm64
 sudo dpkg -i libssl1.1_1.1.0g-2ubuntu4_arm64.deb
 rm libssl1.1_1.1.0g-2ubuntu4_arm64.deb
 # ------ SSH
-mkdir ~/.ssh; chmod 0700 ~/.ssh
-cat << EOF > ~/.ssh/authorized_keys
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAe7mHnisRNUXZ8u5AaeKxm7/ixbaacLWk6S6bpqlEom blb@blb
-EOF
-chmod 0600 ~/.ssh/authorized_keys
+#mkdir ~/.ssh; chmod 0700 ~/.ssh
+#cat << EOF > ~/.ssh/authorized_keys
+#ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAe7mHnisRNUXZ8u5AaeKxm7/ixbaacLWk6S6bpqlEom blb@blb
+#EOF
+#chmod 0600 ~/.ssh/authorized_keys
 # zapiše IP
 ifconfig_out=$(ifconfig)
 ip_line=$(echo "$ifconfig_out" | grep 'inet 192')
@@ -109,3 +109,4 @@ printf "\n\e[93mss = start ccminer\n"
 printf "xx = kill screen\n"
 printf "sl = list screen\n"
 printf "rr = show screen\e[0m\n"
+printf "\n\e[93m■■■ DONE! -> restart ■■■\e[0m\n"
