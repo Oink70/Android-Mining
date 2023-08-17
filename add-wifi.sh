@@ -40,6 +40,11 @@ if ! alias | grep -q "geslo"; then
     alias geslo="./geslo.sh"
 fi
 
+alias sd='scrcpy -d'
+alias pu='./puttyblb.sh'
+alias geslo='./geslo.sh'
+alias tel='./telefoni.sh'
+
 
 
 ??? pkg install networkmanager 
