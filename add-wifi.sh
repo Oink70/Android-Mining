@@ -22,6 +22,12 @@ pkg install android-tools
 adb devices
 
 #!/bin/bash
+echo adb start-server
+adb start-server
+adb devices
+echo "zaženeš z: scrcpy -d"
+
+#!/bin/bash
 read -r -n 3 -p "putty IP:" choice_ip
 putty -ssh blb@192.168.100.$choice_ip -P 8022 -geometry 80x40
 echo "  exit"
