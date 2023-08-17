@@ -32,6 +32,14 @@ read -r -n 3 -p "putty IP:" choice_ip
 putty -ssh blb@192.168.100.$choice_ip -P 8022 -geometry 80x40
 echo "  exit"
 
+#!/bin/sh
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_blb
+
+if ! alias | grep -q "geslo"; then
+    alias geslo="./geslo.sh"
+fi
+
 
 
 ??? pkg install networkmanager 
