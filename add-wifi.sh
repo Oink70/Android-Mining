@@ -21,7 +21,10 @@ $ pkg update
 pkg install android-tools
 adb devices
 
-
+#!/bin/bash
+read -r -n 3 -p "putty IP:" choice_ip
+putty -ssh blb@192.168.100.$choice_ip -P 8022 -geometry 80x40
+echo "  exit"
 
 
 
