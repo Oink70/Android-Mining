@@ -2,8 +2,9 @@
 
 #->  cd ~/ && rm -f ~/nastavi-ip.sh && wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/nastavi-ip.sh && chmod +x nastavi-ip.sh && ~/nastavi-ip.sh
 
-sudo apt-get -y update
-sudo apt-get -y upgrade
+#sudo apt-get -y update
+#sudo apt-get -y upgrade
+pkg install net-tools -y 
 sudo apt install -y net-tools nano
 
 # Nastavi IP
