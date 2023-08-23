@@ -2,6 +2,8 @@
 
 #->  cd ~/ && rm -f ~/nastavi-ip.sh && wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/nastavi-ip.sh && chmod +x nastavi-ip.sh && ~/nastavi-ip.sh
 
+apt install -y net-tools
+
 # Nastavi IP
 ifconfig_out=$(ifconfig)
 ip_line=$(echo "$ifconfig_out" | grep 'inet 192')
