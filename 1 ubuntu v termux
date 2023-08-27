@@ -5,7 +5,7 @@ __Instaliraj termux & termux boot
 ______________________________ 
 TERMUX
 
-pkg update -y && pkg upgrade -y && pkg -y install wget openssh net-tools nano
+pkg update -y && pkg upgrade -y && pkg install -y wget openssh net-tools nano
 
 cd ~/ && rm -f ~/installssh.sh && wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/installssh.sh && chmod +x installssh.sh && ~/installssh.sh
 
