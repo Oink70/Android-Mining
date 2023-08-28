@@ -5,9 +5,11 @@ __Instaliraj termux & termux boot
 ______________________________ 
 TERMUX
 
-pkg update -y && pkg upgrade -y && pkg install -y wget openssh net-tools nano
+pkg update -y && pkg upgrade -y
 
-cd ~/ && rm -f ~/installssh.sh && wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/installssh.sh && chmod +x installssh.sh && ~/installssh.sh
+pkg install -y wget openssh net-tools nano
+
+cd ~/ && rm -f ~/nastavi-ssh.sh && wget https://raw.githubusercontent.com/BLBMS/Android-Mining/main/nastavi-ssh.sh && chmod +x nastavi-ssh.sh && ~/nastavi-ssh.sh
 
 cd ~/ && rm -f nastavi-termux.sh && wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/nastavi-termux.sh && chmod +x nastavi-termux.sh && ./nastavi-termux.sh
 
