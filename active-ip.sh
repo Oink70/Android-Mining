@@ -26,10 +26,10 @@ for ip in {110..118} 130 140 {150..154} {170..175}; do  #dober
     fi
 done
 echo -n -e "\r--------------\n"
-echo -e "\e[32mAktivni  : $active_count \e[0m"
-echo -e "\e[33mNeaktivni: $inactive_count \e[0m"
+echo -e "\e[32mActive  : $active_count \e[0m"
+echo -e "\e[33mInactive: $inactive_count \e[0m"
 if [ $inactive_count -gt 0 ]; then
-    echo -e "Ineactiv devices:\n$inactive_ips"
+    echo -e "Inactive devices:\n$inactive_ips"
 # na email - ne dela
 #    echo -e "Neaktivne naprave:\n$inactive_ips" | mailx -s "Neaktivne naprave">
 fi
