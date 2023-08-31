@@ -1,4 +1,7 @@
 #!/bin/bash
+
+
+
 if [ $# -eq 1 ]; then
     choice_ip=$1
 else
