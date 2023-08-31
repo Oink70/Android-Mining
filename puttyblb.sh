@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+#->  cd ~/ && rm -f ~/puttyblb.sh && wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/puttyblb.sh && chmod +x puttyblb.sh
 
 if [ $# -eq 1 ]; then
     choice_ip=$1
