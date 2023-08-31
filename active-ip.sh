@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#->  cd ~/ && rm -f ~/activ-ip.sh && wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/activ-ip.sh && chmod +x activ-ip.sh
+#->  cd ~/ && rm -f ~/active-ip.sh && wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/active-ip.sh && chmod +x active-ip.sh
 
 active_count=0
 inactive_count=0
