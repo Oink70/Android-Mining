@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#->  cd ~/ && rm -f ~/puttyblb.sh && wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/puttyblb.sh && chmod +x puttyblb.sh
+#->  cd ~/ && rm -f ~/puttyblb.sh && wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/puttyblb.sh && chmod +x puttyblb.sh && wget -q https://raw.githubusercontent.com/BLBMS/Android-Mining/main/spisek
 
 if [ $# -eq 1 ]; then
     choice=$1
