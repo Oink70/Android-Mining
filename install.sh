@@ -28,7 +28,7 @@ GITHUB_DOWNLOAD_NAME=$(echo $GITHUB_RELEASE_JSON | jq -r ".[0].assets[0].name")
 echo "Downloading latest release: $GITHUB_DOWNLOAD_NAME"
 
 wget ${GITHUB_DOWNLOAD_URL} -P ~/ccminer
-mv ~/ccminer/$GITHUB_DOWNLOAD_NAME ccminer
+
 if [ -f ~/ccminer/config.json ]
 then
   INPUT=
