@@ -32,7 +32,8 @@ wget ${GITHUB_DOWNLOAD_URL} -P ~/ccminer
 if [ -f ~/ccminer/config.json ]
 then
   INPUT=
-  while [ "$INPUT" != "y" ] && [ "$INPUT" != "n" ]
+  COUNTER=0
+  while [ "$INPUT" != "y" ] && [ "$INPUT" != "n" ] && [ "$COUNTER" <= "10" ]
   do
     printf '"~/ccminer/config.json" already exists. Do you want to overwrite? (y/n) '
     read INPUT
@@ -40,11 +41,12 @@ then
     then
       echo "\noverwriting current \"~/ccminer/config.json\"\n"
       rm ~/ccminer/config.json
-    elif [ "$INPUT" = "n" ]
+    elif [ "$INPUT" = "n" ] && [ "$COUNTER" = "10" ]
     then
       echo "saving as \"~/ccminer/config.json.#\""
     else
       echo 'Invalid input. Please answer with "y" or "n".\n'
+      ((COUNTER++))
     fi
   done
 fi
