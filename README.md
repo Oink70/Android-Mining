@@ -16,7 +16,7 @@ Quick installation of mining on Android Phones
 - Reading is an dying art. There's no instruction video for people that can't follow instructions step-by-step.
 
 ## Prerequisites
-- Some fundamental Linux knowledge is *required*. (do an online coarse!)
+- Some fundamental Linux knowledge is *required*. (do an online course!)
 - Knowledge about how to operate Linux *screen* is a must.
 - Knowledge on *ssh* and *scp* is highly recommended.
 - Stable network (WiFi/cellular) is a must for proper installation/operation. Be prepared to troubleshoot and fix them yourself.
